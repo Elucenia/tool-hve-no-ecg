@@ -1,0 +1,123 @@
+[
+  {
+    "label": "Homem: SV1 15, RV5 25, Cornell 8 + 18 = 26, QRS 100 ms: Sokolow 40 e produto 2.600 positivos",
+    "input": {
+      "sexo": "M",
+      "sv1": 15,
+      "rv5": 25,
+      "rv6": 22,
+      "ravl": 8,
+      "sv3": 18,
+      "qrs": 100
+    },
+    "expected": {
+      "raw": {
+        "sl": 40,
+        "cv": 26,
+        "cp": 2600,
+        "n": 2
+      },
+      "level": "high"
+    },
+    "originalInput": {
+      "sexo": "M",
+      "sv1": 15,
+      "rv5": 25,
+      "rv6": 22,
+      "ravl": 8,
+      "sv3": 18,
+      "qrs": 100
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Mulher: Cornell 6 + 16 = 22 (&gt; 20), produto (22 + 6) × 90 = 2.520",
+    "input": {
+      "sexo": "F",
+      "sv1": 10,
+      "rv5": 18,
+      "rv6": 16,
+      "ravl": 6,
+      "sv3": 16,
+      "qrs": 90
+    },
+    "expected": {
+      "raw": {
+        "sl": 28,
+        "cv": 22,
+        "cp": 2520,
+        "n": 2
+      },
+      "level": "high"
+    },
+    "originalInput": {
+      "sexo": "F",
+      "sv1": 10,
+      "rv5": 18,
+      "rv6": 16,
+      "ravl": 6,
+      "sv3": 16,
+      "qrs": 90
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Homem sem critérios: Sokolow 25, Cornell 17",
+    "input": {
+      "sexo": "M",
+      "sv1": 10,
+      "rv5": 15,
+      "rv6": 14,
+      "ravl": 5,
+      "sv3": 12,
+      "qrs": 90
+    },
+    "expected": {
+      "raw": {
+        "sl": 25,
+        "cv": 17,
+        "cp": 1530,
+        "n": 0
+      },
+      "level": "low"
+    },
+    "originalInput": {
+      "sexo": "M",
+      "sv1": 10,
+      "rv5": 15,
+      "rv6": 14,
+      "ravl": 5,
+      "sv3": 12,
+      "qrs": 90
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Limites em homem: Sokolow 35 (positivo) e Cornell 28 (negativo)",
+    "input": {
+      "sexo": "M",
+      "sv1": 20,
+      "rv5": 15,
+      "rv6": 14,
+      "ravl": 5,
+      "sv3": 23
+    },
+    "expected": {
+      "raw": {
+        "sl": 35,
+        "cv": 28,
+        "n": 1
+      },
+      "level": "high"
+    },
+    "originalInput": {
+      "sexo": "M",
+      "sv1": 20,
+      "rv5": 15,
+      "rv6": 14,
+      "ravl": 5,
+      "sv3": 23
+    },
+    "expandedZeroOptions": []
+  }
+]

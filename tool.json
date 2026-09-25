@@ -1,0 +1,274 @@
+{
+  "tool": {
+    "id": "hve-no-ecg",
+    "title": "Hipertrofia ventricular esquerda no ECG",
+    "short": "Sokolow-Lyon, Cornell voltagem e produto de Cornell",
+    "desc": "Critérios de sobrecarga do ventrículo esquerdo no eletrocardiograma: Sokolow-Lyon, R em aVL, Cornell voltagem (por sexo) e produto de Cornell.",
+    "lead": "Aplica os critérios de voltagem mais usados para hipertrofia ventricular esquerda no ECG de 12 derivações, com os pontos de corte específicos por sexo do critério de Cornell.",
+    "spec": [
+      "cardiologia",
+      "clinica-medica",
+      "medicina-do-trabalho"
+    ],
+    "fields": [
+      [
+        "sexo",
+        "Sexo",
+        "radio",
+        {
+          "opts": {
+            "F": "Feminino",
+            "M": "Masculino"
+          }
+        }
+      ],
+      [
+        "sv1",
+        "Onda S em V1",
+        "num",
+        {
+          "min": 0,
+          "max": 60,
+          "step": 0.5,
+          "unit": "mm",
+          "ph": "12"
+        }
+      ],
+      [
+        "rv5",
+        "Onda R em V5",
+        "num",
+        {
+          "min": 0,
+          "max": 60,
+          "step": 0.5,
+          "unit": "mm",
+          "ph": "20"
+        }
+      ],
+      [
+        "rv6",
+        "Onda R em V6",
+        "num",
+        {
+          "min": 0,
+          "max": 60,
+          "step": 0.5,
+          "unit": "mm",
+          "ph": "18"
+        }
+      ],
+      [
+        "ravl",
+        "Onda R em aVL",
+        "num",
+        {
+          "min": 0,
+          "max": 40,
+          "step": 0.5,
+          "unit": "mm",
+          "ph": "8"
+        }
+      ],
+      [
+        "sv3",
+        "Onda S em V3",
+        "num",
+        {
+          "min": 0,
+          "max": 60,
+          "step": 0.5,
+          "unit": "mm",
+          "ph": "15"
+        }
+      ],
+      [
+        "qrs",
+        "Duração do QRS (para o produto de Cornell)",
+        "num",
+        {
+          "min": 60,
+          "max": 250,
+          "unit": "ms",
+          "ph": "100",
+          "opt": true
+        }
+      ]
+    ],
+    "formula": "<p><strong>Sokolow-Lyon:</strong> SV1 + (RV5 ou RV6, a maior) ≥ 35 mm; ou R em aVL ≥ 11 mm.</p><p><strong>Cornell voltagem:</strong> RaVL + SV3 &gt; 28 mm nos homens e &gt; 20 mm nas mulheres.</p><p><strong>Produto de Cornell:</strong> (RaVL + SV3, somando 6 mm nas mulheres) × duração do QRS &gt; 2.440 mm·ms.</p><p>Com o ECG calibrado em 10 mm/mV, 1 mm = 0,1 mV.</p>",
+    "table": [
+      [
+        "Critério",
+        "Ponto de corte",
+        "Sensibilidade aproximada"
+      ],
+      [
+        "Sokolow-Lyon",
+        "≥ 35 mm",
+        "Baixa (~20–30%), especificidade alta"
+      ],
+      [
+        "Cornell voltagem",
+        "&gt; 28 mm (H) / &gt; 20 mm (M)",
+        "Um pouco maior que Sokolow-Lyon"
+      ],
+      [
+        "Produto de Cornell",
+        "&gt; 2.440 mm·ms",
+        "A maior entre os três, com especificidade semelhante"
+      ]
+    ],
+    "table_note": "Casale 1987 (autópsia): sensibilidade de 22% para Sokolow-Lyon e 42% para Cornell voltagem.",
+    "tips": [
+      "Um ECG sem critérios não exclui HVE: a sensibilidade é baixa. O ecocardiograma é o exame de escolha para medir a massa do VE.",
+      "Em jovens, atletas e pessoas magras, a voltagem alta pode ser normal; em obesos, DPOC e derrame pericárdico, a voltagem cai.",
+      "Os critérios de voltagem não valem com bloqueio de ramo esquerdo, pré-excitação ou marcapasso.",
+      "Alteração de repolarização associada (padrão de \"strain\") aumenta a especificidade e indica pior prognóstico.",
+      "A ESC 2018 de hipertensão aceita Sokolow-Lyon, Cornell voltagem e produto de Cornell como marcadores de lesão de órgão-alvo."
+    ],
+    "sources": [
+      [
+        "Sokolow M, Lyon TP. The ventricular complex in left ventricular hypertrophy as obtained by unipolar precordial and limb leads. Am Heart J, 1949.",
+        "https://doi.org/10.1016/0002-8703(49)90562-1"
+      ],
+      [
+        "Casale PN et al. Improved sex-specific criteria of left ventricular hypertrophy for clinical and computer interpretation of electrocardiograms: validation with autopsy findings. Circulation, 1987.",
+        "https://doi.org/10.1161/01.CIR.75.3.565"
+      ],
+      [
+        "Okin PM et al. Electrocardiographic identification of increased left ventricular mass by simple voltage-duration products. J Am Coll Cardiol, 1995.",
+        "https://doi.org/10.1016/0735-1097(94)00371-V"
+      ]
+    ],
+    "cases": [
+      [
+        "Homem: SV1 15, RV5 25, Cornell 8 + 18 = 26, QRS 100 ms: Sokolow 40 e produto 2.600 positivos",
+        {
+          "sexo": "M",
+          "sv1": 15,
+          "rv5": 25,
+          "rv6": 22,
+          "ravl": 8,
+          "sv3": 18,
+          "qrs": 100
+        },
+        {
+          "raw": {
+            "sl": 40,
+            "cv": 26,
+            "cp": 2600,
+            "n": 2
+          },
+          "level": "high"
+        }
+      ],
+      [
+        "Mulher: Cornell 6 + 16 = 22 (&gt; 20), produto (22 + 6) × 90 = 2.520",
+        {
+          "sexo": "F",
+          "sv1": 10,
+          "rv5": 18,
+          "rv6": 16,
+          "ravl": 6,
+          "sv3": 16,
+          "qrs": 90
+        },
+        {
+          "raw": {
+            "sl": 28,
+            "cv": 22,
+            "cp": 2520,
+            "n": 2
+          },
+          "level": "high"
+        }
+      ],
+      [
+        "Homem sem critérios: Sokolow 25, Cornell 17",
+        {
+          "sexo": "M",
+          "sv1": 10,
+          "rv5": 15,
+          "rv6": 14,
+          "ravl": 5,
+          "sv3": 12,
+          "qrs": 90
+        },
+        {
+          "raw": {
+            "sl": 25,
+            "cv": 17,
+            "cp": 1530,
+            "n": 0
+          },
+          "level": "low"
+        }
+      ],
+      [
+        "Limites em homem: Sokolow 35 (positivo) e Cornell 28 (negativo)",
+        {
+          "sexo": "M",
+          "sv1": 20,
+          "rv5": 15,
+          "rv6": 14,
+          "ravl": 5,
+          "sv3": 23
+        },
+        {
+          "raw": {
+            "sl": 35,
+            "cv": 28,
+            "n": 1
+          },
+          "level": "high"
+        }
+      ]
+    ],
+    "batch": "torax-vascular",
+    "kind": "Calculadora",
+    "config": null,
+    "areaId": "cardiotoracica",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/torax-vascular.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 4,
+      "passed": 4,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "id": "hve-no-ecg",
+    "reason": "O campo principal retorna HVE ou Sem HVE. Critérios de voltagem negativos não demonstram ausência anatômica de hipertrofia; o estudo original relata sensibilidade limitada. Suspender a conclusão automática até separar medidas, critérios eletrocardiográficos e diagnóstico.",
+    "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/2949887/",
+    "sourceTitle": "Casale et al. — ECG criteria for LVH compared with autopsy findings",
+    "sourceDate": "1987-03",
+    "publisherRegion": "Estados Unidos",
+    "observedMain": [
+      "HVE — pelo ECG",
+      "Sem HVE — pelos critérios de voltagem"
+    ],
+    "status": "restricted",
+    "checkedAt": "2026-09-25",
+    "clinicalValidation": "not-performed",
+    "reviewScope": "Triagem da saída de software em casos fornecidos; identificação da publicação original e conferência limitada de seu contexto. Não é auditoria integral da regra, validação clínica ou revisão médica assinada.",
+    "implementationOutputAudit": "completed-on-supplied-cases",
+    "sourceReviewDepth": "original-reference-and-context-only",
+    "suppressLegacyFormula": true
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/torax-vascular.php",
+    "sha256": "e99bbd1938580ff9b46e0252fdd8cb72e87c63869f934005b8ef6d807ce8b6e2",
+    "bytes": 91275
+  },
+  "clinicalValidation": "not-performed"
+}
