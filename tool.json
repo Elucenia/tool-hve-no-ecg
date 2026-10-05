@@ -1,10 +1,11 @@
 {
   "tool": {
     "id": "hve-no-ecg",
-    "title": "Hipertrofia ventricular esquerda no ECG",
-    "short": "Sokolow-Lyon, Cornell voltagem e produto de Cornell",
-    "desc": "Critérios de sobrecarga do ventrículo esquerdo no eletrocardiograma: Sokolow-Lyon, R em aVL, Cornell voltagem (por sexo) e produto de Cornell.",
-    "lead": "Aplica os critérios de voltagem mais usados para hipertrofia ventricular esquerda no ECG de 12 derivações, com os pontos de corte específicos por sexo do critério de Cornell.",
+    "title": "Critérios de voltagem para HVE no ECG",
+    "short": "Registra critérios eletrocardiográficos; não confirma nem exclui HVE",
+    "desc": "Calcula os critérios de voltagem e produto da edição documentada a partir de um ECG calibrado. A ausência de critérios não exclui hipertrofia ventricular esquerda.",
+    "lead": "Calcula os critérios de voltagem e produto da edição documentada a partir de um ECG calibrado. A ausência de critérios não exclui hipertrofia ventricular esquerda.",
+    "kind": "Escore",
     "spec": [
       "cardiologia",
       "clinica-medica",
@@ -93,40 +94,25 @@
           "ph": "100",
           "opt": true
         }
+      ],
+      [
+        "contexto",
+        "ECG com calibração de 10 mm/mV e medidas conferidas?",
+        "sel",
+        {
+          "opts": {
+            "0": "Não",
+            "1": "Sim"
+          }
+        }
       ]
     ],
-    "formula": "<p><strong>Sokolow-Lyon:</strong> SV1 + (RV5 ou RV6, a maior) ≥ 35 mm; ou R em aVL ≥ 11 mm.</p><p><strong>Cornell voltagem:</strong> RaVL + SV3 &gt; 28 mm nos homens e &gt; 20 mm nas mulheres.</p><p><strong>Produto de Cornell:</strong> (RaVL + SV3, somando 6 mm nas mulheres) × duração do QRS &gt; 2.440 mm·ms.</p><p>Com o ECG calibrado em 10 mm/mV, 1 mm = 0,1 mV.</p>",
-    "table": [
-      [
-        "Critério",
-        "Ponto de corte",
-        "Sensibilidade aproximada"
-      ],
-      [
-        "Sokolow-Lyon",
-        "≥ 35 mm",
-        "Baixa (~20–30%), especificidade alta"
-      ],
-      [
-        "Cornell voltagem",
-        "&gt; 28 mm (H) / &gt; 20 mm (M)",
-        "Um pouco maior que Sokolow-Lyon"
-      ],
-      [
-        "Produto de Cornell",
-        "&gt; 2.440 mm·ms",
-        "A maior entre os três, com especificidade semelhante"
-      ]
-    ],
-    "table_note": "Casale 1987 (autópsia): sensibilidade de 22% para Sokolow-Lyon e 42% para Cornell voltagem.",
-    "tips": [
-      "Um ECG sem critérios não exclui HVE: a sensibilidade é baixa. O ecocardiograma é o exame de escolha para medir a massa do VE.",
-      "Em jovens, atletas e pessoas magras, a voltagem alta pode ser normal; em obesos, DPOC e derrame pericárdico, a voltagem cai.",
-      "Os critérios de voltagem não valem com bloqueio de ramo esquerdo, pré-excitação ou marcapasso.",
-      "Alteração de repolarização associada (padrão de \"strain\") aumenta a especificidade e indica pior prognóstico.",
-      "A ESC 2018 de hipertensão aceita Sokolow-Lyon, Cornell voltagem e produto de Cornell como marcadores de lesão de órgão-alvo."
-    ],
+    "formula": "<p>Sokolow–Lyon: SV1 + max(RV5,RV6) ≥ 35 mm. R aVL ≥ 11 mm. Cornell: RaVL + SV3 &gt; 28 mm em homens ou &gt; 20 mm em mulheres. Produto de Cornell: (Cornell + 6 mm em mulheres) × QRS &gt; 2440 mm·ms.</p>",
     "sources": [
+      [
+        "Okin et al. · LIFE 2004 · convenção do produto de Cornell",
+        "https://jamanetwork.com/journals/jama/fullarticle/199807"
+      ],
       [
         "Sokolow M, Lyon TP. The ventricular complex in left ventricular hypertrophy as obtained by unipolar precordial and limb leads. Am Heart J, 1949.",
         "https://doi.org/10.1016/0002-8703(49)90562-1"
@@ -142,124 +128,550 @@
     ],
     "cases": [
       [
-        "Homem: SV1 15, RV5 25, Cornell 8 + 18 = 26, QRS 100 ms: Sokolow 40 e produto 2.600 positivos",
-        {
-          "sexo": "M",
-          "sv1": 15,
-          "rv5": 25,
-          "rv6": 22,
-          "ravl": 8,
-          "sv3": 18,
-          "qrs": 100
-        },
-        {
-          "raw": {
-            "sl": 40,
-            "cv": 26,
-            "cp": 2600,
-            "n": 2
-          },
-          "level": "high"
-        }
-      ],
-      [
-        "Mulher: Cornell 6 + 16 = 22 (&gt; 20), produto (22 + 6) × 90 = 2.520",
+        "Vetor sintético principal de referência",
         {
           "sexo": "F",
-          "sv1": 10,
-          "rv5": 18,
-          "rv6": 16,
-          "ravl": 6,
-          "sv3": 16,
-          "qrs": 90
-        },
-        {
-          "raw": {
-            "sl": 28,
-            "cv": 22,
-            "cp": 2520,
-            "n": 2
-          },
-          "level": "high"
-        }
-      ],
-      [
-        "Homem sem critérios: Sokolow 25, Cornell 17",
-        {
-          "sexo": "M",
-          "sv1": 10,
-          "rv5": 15,
-          "rv6": 14,
-          "ravl": 5,
-          "sv3": 12,
-          "qrs": 90
-        },
-        {
-          "raw": {
-            "sl": 25,
-            "cv": 17,
-            "cp": 1530,
-            "n": 0
-          },
-          "level": "low"
-        }
-      ],
-      [
-        "Limites em homem: Sokolow 35 (positivo) e Cornell 28 (negativo)",
-        {
-          "sexo": "M",
-          "sv1": 20,
-          "rv5": 15,
-          "rv6": 14,
-          "ravl": 5,
-          "sv3": 23
+          "sv1": 15,
+          "rv5": 20,
+          "rv6": 18,
+          "ravl": 10,
+          "sv3": 14,
+          "qrs": 100,
+          "contexto": "1"
         },
         {
           "raw": {
             "sl": 35,
+            "cv": 24,
+            "cp": 3000,
+            "n": 3
+          },
+          "main": "3"
+        }
+      ],
+      [
+        "Cornell feminino exatamente20 não ultrapassa limiar",
+        {
+          "sexo": "F",
+          "sv1": 0,
+          "rv5": 0,
+          "rv6": 0,
+          "ravl": 10,
+          "sv3": 10,
+          "qrs": null,
+          "contexto": "1"
+        },
+        {
+          "raw": {
+            "sl": 0,
+            "cv": 20,
+            "cp": null,
+            "n": 0
+          },
+          "main": "0"
+        }
+      ],
+      [
+        "Cornell masculino exatamente28 não ultrapassa limiar",
+        {
+          "sexo": "M",
+          "sv1": 0,
+          "rv5": 0,
+          "rv6": 0,
+          "ravl": 10,
+          "sv3": 18,
+          "qrs": null,
+          "contexto": "1"
+        },
+        {
+          "raw": {
+            "sl": 0,
             "cv": 28,
+            "cp": null,
+            "n": 0
+          },
+          "main": "0"
+        }
+      ],
+      [
+        "ProdutoLIFE feminino exatamente2440 não ultrapassa limiar",
+        {
+          "sexo": "F",
+          "sv1": 0,
+          "rv5": 0,
+          "rv6": 0,
+          "ravl": 10,
+          "sv3": 8.4,
+          "qrs": 100,
+          "contexto": "1"
+        },
+        {
+          "raw": {
+            "sl": 0,
+            "cv": 18.4,
+            "cp": 2440,
+            "n": 0
+          },
+          "main": "0",
+          "tol": 1e-9
+        }
+      ],
+      [
+        "LIFE feminino+6 distingue da versão+8",
+        {
+          "sexo": "F",
+          "sv1": 0,
+          "rv5": 0,
+          "rv6": 0,
+          "ravl": 10,
+          "sv3": 8,
+          "qrs": 100,
+          "contexto": "1"
+        },
+        {
+          "raw": {
+            "sl": 0,
+            "cv": 18,
+            "cp": 2400,
+            "n": 0
+          },
+          "main": "0"
+        }
+      ],
+      [
+        "R aVL11 é critério mesmo sem Cornell",
+        {
+          "sexo": "F",
+          "sv1": 0,
+          "rv5": 0,
+          "rv6": 0,
+          "ravl": 11,
+          "sv3": 0,
+          "qrs": null,
+          "contexto": "1"
+        },
+        {
+          "raw": {
+            "sl": 0,
+            "cv": 11,
+            "cp": null,
             "n": 1
           },
-          "level": "high"
+          "main": "1"
         }
       ]
     ],
-    "kind": "Calculadora",
-    "config": null,
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
-      "testedAt": "2026-09-25",
-      "total": 4,
-      "passed": 4,
-      "failures": []
+      "testedAt": "2026-10-03",
+      "total": 6,
+      "passed": 6,
+      "failures": [],
+      "evidencePath": "reports/review-20261003/restored-methods-source-rules.json",
+      "scope": "Synthetic source-rule arithmetic checks. Independent clinical validation not performed."
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
-    }
-  },
-  "review": {
-    "id": "hve-no-ecg",
-    "reason": "O campo principal retorna HVE ou Sem HVE. Critérios de voltagem negativos não demonstram ausência anatômica de hipertrofia; o estudo original relata sensibilidade limitada. Suspender a conclusão automática até separar medidas, critérios eletrocardiográficos e diagnóstico.",
-    "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/2949887/",
-    "sourceTitle": "Casale et al. — ECG criteria for LVH compared with autopsy findings",
-    "sourceDate": "1987-03",
-    "publisherRegion": "Estados Unidos",
-    "observedMain": [
-      "HVE — pelo ECG",
-      "Sem HVE — pelos critérios de voltagem"
-    ],
-    "status": "restricted",
-    "checkedAt": "2026-09-25",
+      "status": "passed",
+      "testedAt": "2026-10-03",
+      "total": 40,
+      "passed": 40,
+      "evidencePath": "reports/review-20261003/restored-methods-source-rules.json",
+      "scope": "Independent expected values and source-rule boundary checks; not clinical approval.",
+      "sourceRowCount": 40,
+      "uniqueApiInputCount": 35,
+      "inputIdentity": {
+        "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+        "audit": {
+          "file": "reports/review-20261003/independent-source-corpus-input-identity-audit-final25.json",
+          "sha256": "35d65e84c5608a5f572fce6837f0a8c101b2266f5d6eec32a3d60d2bb6b022ca"
+        },
+        "sourceRows": 40,
+        "uniqueApiInputs": 35,
+        "duplicateRows": 5,
+        "duplicates": [
+          {
+            "first": 10,
+            "repeat": 13,
+            "input": {
+              "sexo": "F",
+              "sv1": null,
+              "rv5": 20,
+              "rv6": 18,
+              "ravl": 10,
+              "sv3": 14,
+              "qrs": 100,
+              "contexto": "1"
+            }
+          },
+          {
+            "first": 15,
+            "repeat": 18,
+            "input": {
+              "sexo": "F",
+              "sv1": 15,
+              "rv5": null,
+              "rv6": 18,
+              "ravl": 10,
+              "sv3": 14,
+              "qrs": 100,
+              "contexto": "1"
+            }
+          },
+          {
+            "first": 20,
+            "repeat": 23,
+            "input": {
+              "sexo": "F",
+              "sv1": 15,
+              "rv5": 20,
+              "rv6": null,
+              "ravl": 10,
+              "sv3": 14,
+              "qrs": 100,
+              "contexto": "1"
+            }
+          },
+          {
+            "first": 25,
+            "repeat": 28,
+            "input": {
+              "sexo": "F",
+              "sv1": 15,
+              "rv5": 20,
+              "rv6": 18,
+              "ravl": null,
+              "sv3": 14,
+              "qrs": 100,
+              "contexto": "1"
+            }
+          },
+          {
+            "first": 30,
+            "repeat": 33,
+            "input": {
+              "sexo": "F",
+              "sv1": 15,
+              "rv5": 20,
+              "rv6": 18,
+              "ravl": 10,
+              "sv3": null,
+              "qrs": 100,
+              "contexto": "1"
+            }
+          }
+        ],
+        "coverageStatusUnchanged": true
+      },
+      "publicCandidateBankOmitted": true
+    },
+    "limits": "Saída é número de critérios positivos, sem diagnóstico de HVE ou declaração de ausência de HVE. Produto usa convenção LIFE de +6 mm em mulheres; outras versões usam convenções distintas.",
+    "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+    "currentMethodSource": {
+      "title": "Okin et al. · LIFE 2004 · convenção do produto de Cornell",
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/199807",
+      "version": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+      "checkedAt": "2026-10-03",
+      "access": "full-article"
+    },
+    "primaryVerification": {
+      "url": "https://jamanetwork.com/journals/jama/fullarticle/199807",
+      "checked": "Artigo primário LIFE 2004: ajuste feminino do produto de Cornell reduzido de 8 para 6 mm em 1996, com limiar de 2.440 mm·ms. Convenção separada do Sokolow–Lyon padrão de 35 mm e dos limiares de voltagem Cornell por sexo. Saída conta critérios, sem diagnóstico.",
+      "access": "full-article"
+    },
     "clinicalValidation": "not-performed",
-    "reviewScope": "Triagem da saída de software em casos fornecidos; identificação da publicação original e conferência limitada de seu contexto. Não é auditoria integral da regra, validação clínica ou revisão médica assinada.",
-    "implementationOutputAudit": "completed-on-supplied-cases",
-    "sourceReviewDepth": "original-reference-and-context-only",
-    "suppressLegacyFormula": true
+    "languageReview": "not-performed",
+    "reviewStatus": "needs-review",
+    "implementationStatus": "available",
+    "versionEvidence": {
+      "status": "explicit-implemented-variant-and-existing-source-proofs-recorded",
+      "checkedAt": "2026-10-04T17:52:09.841Z",
+      "declaredMethodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+      "implementedVariant": "Sokolow–Lyon: SV1 + max(RV5,RV6) ≥ 35 mm. R aVL ≥ 11 mm. Cornell: RaVL + SV3 > 28 mm em homens ou > 20 mm em mulheres. Produto de Cornell: (Cornell + 6 mm em mulheres) × QRS > 2440 mm·ms.",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "sexo",
+            "label": "Sexo",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "F": "Feminino",
+              "M": "Masculino"
+            }
+          },
+          {
+            "key": "sv1",
+            "label": "Onda S em V1",
+            "type": "num",
+            "min": 0,
+            "max": 60,
+            "unit": "mm",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "rv5",
+            "label": "Onda R em V5",
+            "type": "num",
+            "min": 0,
+            "max": 60,
+            "unit": "mm",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "rv6",
+            "label": "Onda R em V6",
+            "type": "num",
+            "min": 0,
+            "max": 60,
+            "unit": "mm",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "ravl",
+            "label": "Onda R em aVL",
+            "type": "num",
+            "min": 0,
+            "max": 40,
+            "unit": "mm",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "sv3",
+            "label": "Onda S em V3",
+            "type": "num",
+            "min": 0,
+            "max": 60,
+            "unit": "mm",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "qrs",
+            "label": "Duração do QRS (para o produto de Cornell)",
+            "type": "num",
+            "min": 60,
+            "max": 250,
+            "unit": "ms",
+            "optional": true,
+            "options": null
+          },
+          {
+            "key": "contexto",
+            "label": "ECG com calibração de 10 mm/mV e medidas conferidas?",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "0": "Não",
+              "1": "Sim"
+            }
+          }
+        ],
+        "hash": "42699a0632ca03c9cf828896cdb4cd0671999ceb4c72d83bfcd848a70f24ec22",
+        "hashInputDefinition": "SHA256 of UTF8 JSON.stringify({id:tool.id,fields:tool.fields,formula:tool.formula,config:tool.config||null}), preserving declared order/value types; not a hash of versionEvidence.inputContract.fields display projection."
+      },
+      "sourceEditions": [
+        {
+          "citation": "Okin et al. · LIFE 2004 · convenção do produto de Cornell",
+          "url": "https://jamanetwork.com/journals/jama/fullarticle/199807",
+          "class": "existing-source-record-transcribed",
+          "declaredCitationPreserved": true,
+          "sourceIdentityRecheckedInThisNormalization": false,
+          "publicationEditionConfirmationInThisNormalization": "not-performed",
+          "fullTextRetrievalInThisNormalization": false,
+          "formulaConformance": "not-assessed"
+        },
+        {
+          "citation": "Sokolow M, Lyon TP. The ventricular complex in left ventricular hypertrophy as obtained by unipolar precordial and limb leads. Am Heart J, 1949.",
+          "url": "https://doi.org/10.1016/0002-8703(49)90562-1",
+          "class": "existing-source-record-transcribed",
+          "declaredCitationPreserved": true,
+          "sourceIdentityRecheckedInThisNormalization": false,
+          "publicationEditionConfirmationInThisNormalization": "not-performed",
+          "fullTextRetrievalInThisNormalization": false,
+          "formulaConformance": "not-assessed"
+        },
+        {
+          "citation": "Casale PN et al. Improved sex-specific criteria of left ventricular hypertrophy for clinical and computer interpretation of electrocardiograms: validation with autopsy findings. Circulation, 1987.",
+          "url": "https://doi.org/10.1161/01.CIR.75.3.565",
+          "class": "existing-source-record-transcribed",
+          "declaredCitationPreserved": true,
+          "sourceIdentityRecheckedInThisNormalization": false,
+          "publicationEditionConfirmationInThisNormalization": "not-performed",
+          "fullTextRetrievalInThisNormalization": false,
+          "formulaConformance": "not-assessed"
+        },
+        {
+          "citation": "Okin PM et al. Electrocardiographic identification of increased left ventricular mass by simple voltage-duration products. J Am Coll Cardiol, 1995.",
+          "url": "https://doi.org/10.1016/0735-1097(94)00371-V",
+          "class": "existing-source-record-transcribed",
+          "declaredCitationPreserved": true,
+          "sourceIdentityRecheckedInThisNormalization": false,
+          "publicationEditionConfirmationInThisNormalization": "not-performed",
+          "fullTextRetrievalInThisNormalization": false,
+          "formulaConformance": "not-assessed"
+        }
+      ],
+      "existingSourceEvidence": {
+        "currentMethodSource": {
+          "title": "Okin et al. · LIFE 2004 · convenção do produto de Cornell",
+          "url": "https://jamanetwork.com/journals/jama/fullarticle/199807",
+          "version": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+          "checkedAt": "2026-10-03",
+          "access": "full-article"
+        },
+        "primaryVerification": {
+          "url": "https://jamanetwork.com/journals/jama/fullarticle/199807",
+          "checked": "Artigo primário LIFE 2004: ajuste feminino do produto de Cornell reduzido de 8 para 6 mm em 1996, com limiar de 2.440 mm·ms. Convenção separada do Sokolow–Lyon padrão de 35 mm e dos limiares de voltagem Cornell por sexo. Saída conta critérios, sem diagnóstico.",
+          "access": "full-article"
+        }
+      },
+      "editionRecordingScope": "The methodVersion and all previously recorded source access/edition proofs are transcribed unchanged. This technical normalization makes no new bibliographic/full-text/source-formula confirmation; named existing read scopes remain in existingSourceEvidence. A missing standardized container did not mean the method edition was missing.",
+      "publicationEditionConfirmationReevaluated": false,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by technical hashes or metadata normalization; retain existing bounded source arithmetic and clinical review separately.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-03",
+        "total": 40,
+        "passed": 40,
+        "evidencePath": "reports/review-20261003/restored-methods-source-rules.json",
+        "scope": "Independent expected values and source-rule boundary checks; not clinical approval.",
+        "sourceRowCount": 40,
+        "uniqueApiInputCount": 35,
+        "inputIdentity": {
+          "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+          "audit": {
+            "file": "reports/review-20261003/independent-source-corpus-input-identity-audit-final25.json",
+            "sha256": "35d65e84c5608a5f572fce6837f0a8c101b2266f5d6eec32a3d60d2bb6b022ca"
+          },
+          "sourceRows": 40,
+          "uniqueApiInputs": 35,
+          "duplicateRows": 5,
+          "duplicates": [
+            {
+              "first": 10,
+              "repeat": 13,
+              "input": {
+                "sexo": "F",
+                "sv1": null,
+                "rv5": 20,
+                "rv6": 18,
+                "ravl": 10,
+                "sv3": 14,
+                "qrs": 100,
+                "contexto": "1"
+              }
+            },
+            {
+              "first": 15,
+              "repeat": 18,
+              "input": {
+                "sexo": "F",
+                "sv1": 15,
+                "rv5": null,
+                "rv6": 18,
+                "ravl": 10,
+                "sv3": 14,
+                "qrs": 100,
+                "contexto": "1"
+              }
+            },
+            {
+              "first": 20,
+              "repeat": 23,
+              "input": {
+                "sexo": "F",
+                "sv1": 15,
+                "rv5": 20,
+                "rv6": null,
+                "ravl": 10,
+                "sv3": 14,
+                "qrs": 100,
+                "contexto": "1"
+              }
+            },
+            {
+              "first": 25,
+              "repeat": 28,
+              "input": {
+                "sexo": "F",
+                "sv1": 15,
+                "rv5": 20,
+                "rv6": 18,
+                "ravl": null,
+                "sv3": 14,
+                "qrs": 100,
+                "contexto": "1"
+              }
+            },
+            {
+              "first": 30,
+              "repeat": 33,
+              "input": {
+                "sexo": "F",
+                "sv1": 15,
+                "rv5": 20,
+                "rv6": 18,
+                "ravl": 10,
+                "sv3": null,
+                "qrs": 100,
+                "contexto": "1"
+              }
+            }
+          ],
+          "coverageStatusUnchanged": true
+        },
+        "publicCandidateBankOmitted": true
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "implementationHash": "a0796fa9f026928db3b3cf2c922c9ed7fbf94f5bf4f39bd5513cbfe2e7c4425c",
+      "implementationHashScope": "Exact current calculator.js bytes, individually verified in three app mirrors. This is not a full dependency-closure hash.",
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-04T17:52:09.841Z",
+          "scope": "First standardized container; explicit existing methodVersion and source proof objects preserved.",
+          "priorStandardizedContainerPresent": false,
+          "priorImplementationVersion": null,
+          "explicitMethodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+          "sourceEvidenceSha256": "c22afc17e49e1f7bd6f257f74ce7f7c2e75e9245d27d51fb8548dddaaa335161",
+          "metadataAudit": {
+            "file": "reports/review-20261003/native-technical-bindings-audit-publication-final26.json",
+            "sha256": "e615fa3a42555f8fbeb4de8763893c3e981a73eae4c8c1994b33727e19ebd8c8"
+          }
+        }
+      ]
+    },
+    "implementationVersion": "hve-no-ecg@native-2026-10-04+a0796fa9f026"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "6dd1c55985b0fc5350ccaab73cb0e5d08ff7bde08ab02c9541a7bb7d0972fd15",
+  "omittedFullReferenceBanks": [
+    {
+      "at": "independentArithmeticTest.cases",
+      "rows": 40,
+      "sha256": "fea0c2cc0495db64eed217f0793c27945a24009c4bcf999480b6f596bcdb954d",
+      "reason": "Full independent reference bank omitted from standalone public candidate; original evidence references retained"
+    },
+    {
+      "at": "versionEvidence.independentArithmetic.cases",
+      "rows": 40,
+      "sha256": "fea0c2cc0495db64eed217f0793c27945a24009c4bcf999480b6f596bcdb954d",
+      "reason": "Embedded complete independent bank omitted; edition, scope and evidence references retained"
+    }
+  ],
+  "currentSource": {
+    "file": "apps/website/private/tool-code/hve-no-ecg/calculator.js",
+    "bytes": 481,
+    "sha256": "a0796fa9f026928db3b3cf2c922c9ed7fbf94f5bf4f39bd5513cbfe2e7c4425c"
+  },
+  "clinicalValidation": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }

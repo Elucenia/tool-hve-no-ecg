@@ -1,0 +1,155 @@
+{
+  "stage": "prepared-not-published",
+  "id": "hve-no-ecg",
+  "repository": "Elucenia/tool-hve-no-ecg",
+  "build": {
+    "id": "6QpMzbnUBE2fep9nyJzTM",
+    "directory": ".next-private-final36",
+    "receiptSha256": "05823c22753741cd9947b8a5edad0c3f232f5cc4e935d1015837524ac6c34d0b"
+  },
+  "baseline": {
+    "parentCommitSha": "ed2ff508826e3e2811d792926268f26df7a64e68",
+    "baseTreeSha": "863a90ba057585dcb17d991f545d31ff71662826",
+    "indexBlobSha": "591e4fb72f4dbbf74df26f8e683028788db3677c",
+    "protectedFiles": {
+      "LICENSE": {
+        "path": "LICENSE",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+        "size": 11358,
+        "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/d645695673349e3947e8e5ae42332d0ac3164cd7"
+      },
+      "NOTICE": {
+        "path": "NOTICE",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "55069b6f367f57e92b3d93c54d8d497d1114e337",
+        "size": 1622,
+        "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/55069b6f367f57e92b3d93c54d8d497d1114e337"
+      },
+      "AUTHORSHIP.md": {
+        "path": "AUTHORSHIP.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fd433580cefc0521657fc2ea1bc611d54b46a766",
+        "size": 3291,
+        "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/fd433580cefc0521657fc2ea1bc611d54b46a766"
+      },
+      "CITATION.cff": {
+        "path": "CITATION.cff",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "22086eaf02c60930f16f77c8f8f30a67e5611305",
+        "size": 913,
+        "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/22086eaf02c60930f16f77c8f8f30a67e5611305"
+      },
+      "SECURITY.md": {
+        "path": "SECURITY.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "44eafb996937916cbe53e24fa9c5208fe03d5767",
+        "size": 894,
+        "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/44eafb996937916cbe53e24fa9c5208fe03d5767"
+      },
+      "CONTRIBUTING.md": {
+        "path": "CONTRIBUTING.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c496276fb860ca486163e81823cae3e67194d95a",
+        "size": 1461,
+        "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/c496276fb860ca486163e81823cae3e67194d95a"
+      },
+      ".github/workflows/ci.yml": {
+        "path": ".github/workflows/ci.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7d3f2f34aa2e948d30695d82d64361467d9e6485",
+        "size": 279,
+        "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/7d3f2f34aa2e948d30695d82d64361467d9e6485"
+      },
+      ".gitattributes": {
+        "path": ".gitattributes",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+        "size": 19,
+        "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/6313b56c57848efce05faa7aa7e901ccfc2886ea"
+      },
+      ".gitignore": {
+        "path": ".gitignore",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e375bd25cf1a574310ac4c7af0299884556e81e1",
+        "size": 42,
+        "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/e375bd25cf1a574310ac4c7af0299884556e81e1"
+      }
+    }
+  },
+  "methodSourceModules": [
+    "calculator.js",
+    "runtime/restored-methods.cjs",
+    "runtime/restoration-original-tools.json"
+  ],
+  "implementationBrowserSha256": "7afe9f8dcfd2e1b9c8607dc774e61886206e7b9fbcddc87f9a2e0baceef31347",
+  "localeDataSha256": "be3194cb6a47acaf319be0b9cc66a7abe14a473d4fcf5d108c746937e9b00021",
+  "originalStyleSha256": "8fd25e9dc1c0980e3b39b2375d36b96276eec3cbc24284cbc3cc01dc00a67a5c",
+  "originalIndexSha256": "2f37b9b5b5de77c971f513d7ab6a26e55a7b1f33174b5f6a50725f56f6b441e8",
+  "example": {
+    "label": "Current source-owned complete UI/API fixture",
+    "input": {
+      "sexo": "F",
+      "sv1": 15,
+      "rv5": 20,
+      "rv6": 18,
+      "ravl": 10,
+      "sv3": 14,
+      "qrs": 100,
+      "contexto": "1"
+    },
+    "expected": {
+      "raw": {
+        "sl": 35,
+        "cv": 24,
+        "cp": 3000,
+        "n": 3
+      },
+      "main": "3"
+    },
+    "obtained": {
+      "id": "hve-no-ecg",
+      "main": [
+        "3",
+        "critérios"
+      ],
+      "label": "Critérios eletrocardiográficos positivos",
+      "raw": {
+        "sl": 35,
+        "cv": 24,
+        "cp": 3000,
+        "n": 3
+      },
+      "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+      "clinicalValidation": "not-performed"
+    },
+    "scope": "Source-owned example Node/browser wiring parity; not a new clinical oracle"
+  },
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed",
+  "documentationLocales": [
+    "pt-BR",
+    "en",
+    "es",
+    "fr",
+    "de",
+    "it",
+    "ar",
+    "zh",
+    "ja",
+    "hi"
+  ],
+  "documentationTemplateSha256": "ae4c41b39ab92a14adbfab83b946751a75c8168b5927e1f808d1c629ec032ea4",
+  "appWrites": false,
+  "externalMutations": false
+}

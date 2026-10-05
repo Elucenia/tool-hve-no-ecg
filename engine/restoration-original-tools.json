@@ -1,0 +1,105 @@
+[
+  {
+    "id": "hve-no-ecg",
+    "title": "Hipertrofia ventricular esquerda no ECG",
+    "fields": [
+      [
+        "sexo",
+        "Sexo",
+        "radio",
+        {
+          "opts": {
+            "F": "Feminino",
+            "M": "Masculino"
+          }
+        }
+      ],
+      [
+        "sv1",
+        "Onda S em V1",
+        "num",
+        {
+          "min": 0,
+          "max": 60,
+          "step": 0.5,
+          "unit": "mm",
+          "ph": "12"
+        }
+      ],
+      [
+        "rv5",
+        "Onda R em V5",
+        "num",
+        {
+          "min": 0,
+          "max": 60,
+          "step": 0.5,
+          "unit": "mm",
+          "ph": "20"
+        }
+      ],
+      [
+        "rv6",
+        "Onda R em V6",
+        "num",
+        {
+          "min": 0,
+          "max": 60,
+          "step": 0.5,
+          "unit": "mm",
+          "ph": "18"
+        }
+      ],
+      [
+        "ravl",
+        "Onda R em aVL",
+        "num",
+        {
+          "min": 0,
+          "max": 40,
+          "step": 0.5,
+          "unit": "mm",
+          "ph": "8"
+        }
+      ],
+      [
+        "sv3",
+        "Onda S em V3",
+        "num",
+        {
+          "min": 0,
+          "max": 60,
+          "step": 0.5,
+          "unit": "mm",
+          "ph": "15"
+        }
+      ],
+      [
+        "qrs",
+        "Duração do QRS (para o produto de Cornell)",
+        "num",
+        {
+          "min": 60,
+          "max": 250,
+          "unit": "ms",
+          "ph": "100",
+          "opt": true
+        }
+      ]
+    ],
+    "sources": [
+      [
+        "Sokolow M, Lyon TP. The ventricular complex in left ventricular hypertrophy as obtained by unipolar precordial and limb leads. Am Heart J, 1949.",
+        "https://doi.org/10.1016/0002-8703(49)90562-1"
+      ],
+      [
+        "Casale PN et al. Improved sex-specific criteria of left ventricular hypertrophy for clinical and computer interpretation of electrocardiograms: validation with autopsy findings. Circulation, 1987.",
+        "https://doi.org/10.1161/01.CIR.75.3.565"
+      ],
+      [
+        "Okin PM et al. Electrocardiographic identification of increased left ventricular mass by simple voltage-duration products. J Am Coll Cardiol, 1995.",
+        "https://doi.org/10.1016/0735-1097(94)00371-V"
+      ]
+    ]
+  }
+]

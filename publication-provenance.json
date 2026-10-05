@@ -1,0 +1,270 @@
+{
+  "schema": "elucenia-current-per-tool-local-publication-candidate",
+  "id": "hve-no-ecg",
+  "repository": "Elucenia/tool-hve-no-ecg",
+  "parentCommitSha": "ed2ff508826e3e2811d792926268f26df7a64e68",
+  "baseTreeSha": "863a90ba057585dcb17d991f545d31ff71662826",
+  "protectedFiles": {
+    "LICENSE": {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "size": 11358,
+      "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/d645695673349e3947e8e5ae42332d0ac3164cd7"
+    },
+    "NOTICE": {
+      "path": "NOTICE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55069b6f367f57e92b3d93c54d8d497d1114e337",
+      "size": 1622,
+      "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/55069b6f367f57e92b3d93c54d8d497d1114e337"
+    },
+    "AUTHORSHIP.md": {
+      "path": "AUTHORSHIP.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd433580cefc0521657fc2ea1bc611d54b46a766",
+      "size": 3291,
+      "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/fd433580cefc0521657fc2ea1bc611d54b46a766"
+    },
+    "CITATION.cff": {
+      "path": "CITATION.cff",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22086eaf02c60930f16f77c8f8f30a67e5611305",
+      "size": 913,
+      "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/22086eaf02c60930f16f77c8f8f30a67e5611305"
+    },
+    "SECURITY.md": {
+      "path": "SECURITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44eafb996937916cbe53e24fa9c5208fe03d5767",
+      "size": 894,
+      "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/44eafb996937916cbe53e24fa9c5208fe03d5767"
+    },
+    "CONTRIBUTING.md": {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c496276fb860ca486163e81823cae3e67194d95a",
+      "size": 1461,
+      "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/c496276fb860ca486163e81823cae3e67194d95a"
+    },
+    ".github/workflows/ci.yml": {
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d3f2f34aa2e948d30695d82d64361467d9e6485",
+      "size": 279,
+      "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/7d3f2f34aa2e948d30695d82d64361467d9e6485"
+    },
+    ".gitattributes": {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+      "size": 19,
+      "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/6313b56c57848efce05faa7aa7e901ccfc2886ea"
+    },
+    ".gitignore": {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e375bd25cf1a574310ac4c7af0299884556e81e1",
+      "size": 42,
+      "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/e375bd25cf1a574310ac4c7af0299884556e81e1"
+    }
+  },
+  "oldCandidate": {
+    "manifest": {
+      "file": "reports/review-20261003/github-publication-candidate-final36-v4.json",
+      "bytes": 6823260,
+      "sha256": "a3c528b12d7b5416fa0e62dda9e5106864bae7ff86710fa765934b5a3069e16c"
+    },
+    "rowId": "hve-no-ecg",
+    "publicationProvenance": {
+      "file": "reports/review-20261003/github-publication-candidates-final36-v4/hve-no-ecg/publication-provenance.json",
+      "bytes": 5203,
+      "sha256": "f78e313885431c3e50707920a8550059fa5c17d3a1b5eb0caa1f294f9b35e760"
+    },
+    "integrationProvenance": {
+      "file": "reports/review-20261003/github-publication-candidates-final36-v4/hve-no-ecg/provenance.json",
+      "bytes": 62751,
+      "sha256": "98229d0a6f4457f6dcd30a811ab787c82da2537dec2a096268532508801744f8"
+    }
+  },
+  "currentSource": {
+    "file": "apps/website/private/tool-code/hve-no-ecg/calculator.js",
+    "bytes": 481,
+    "sha256": "a0796fa9f026928db3b3cf2c922c9ed7fbf94f5bf4f39bd5513cbfe2e7c4425c"
+  },
+  "sourceToolSha256": "6dd1c55985b0fc5350ccaab73cb0e5d08ff7bde08ab02c9541a7bb7d0972fd15",
+  "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+  "implementationVersion": "hve-no-ecg@native-2026-10-04+a0796fa9f026",
+  "browserBundleSha256": "095a1cb34797d9fee72513e1b1a8e985454cc5b9ba27e060b4fe68922cf3aa08",
+  "graph": {
+    "entry": "tool-code/hve-no-ecg/calculator.js",
+    "modules": [
+      {
+        "file": "tool-code/hve-no-ecg/calculator.js",
+        "bytes": 481,
+        "sha256": "a0796fa9f026928db3b3cf2c922c9ed7fbf94f5bf4f39bd5513cbfe2e7c4425c"
+      },
+      {
+        "file": "restored-methods.cjs",
+        "bytes": 4614,
+        "sha256": "4ea3a16300e0515fbc52b27e45e3b832e5ec143281a84d0843a6b0455f3da250"
+      },
+      {
+        "file": "restoration-original-tools.json",
+        "bytes": 2282,
+        "sha256": "9cc48947efda2d5bb90e8e858cc50ad0e8a91efa4be2689e3541a9018ffd6e7d"
+      }
+    ],
+    "transforms": [
+      {
+        "file": "restored-methods.cjs",
+        "sourceSha256": "630dccade18742e4bc364b32f4ef4d6bc75aeceb262face8ddae806be7962c23",
+        "kind": "Deterministic AST selection of one existing define call plus unchanged shared arithmetic/schema helpers",
+        "selectedId": "hve-no-ecg",
+        "otherMethodDefinitionsIncluded": 0
+      },
+      {
+        "file": "restoration-original-tools.json",
+        "sourceSha256": "ccee00665e024104d254acf77a43609acb02d593e016ee8c6b7cebf3769da389",
+        "kind": "One original field/source contract only; no other tools, reference banks or original results",
+        "selectedId": "hve-no-ecg",
+        "keys": [
+          "id",
+          "title",
+          "fields",
+          "sources"
+        ]
+      }
+    ]
+  },
+  "currentActualHttpEvidence": {
+    "file": "reports/review-20261005-completion/deploy-lock/r5-all-calculators-http-results.json",
+    "bytes": 7105457,
+    "sha256": "be450b3731f8b30a13e0b36bf1f2f579bce00de325c5622bc3e526235c1c79f7"
+  },
+  "tests": {
+    "cases": 6,
+    "sourceNodeParityPassed": true,
+    "browserVmParityPassed": true,
+    "independentOracleDerived": false,
+    "actualBrowserDOMVerified": false
+  },
+  "rights": {
+    "historicalPayloadLicenseDeclaration": "Apache-2.0",
+    "currentIntegrationPackageLicenseDeclaration": "MIT",
+    "currentLegalFiles": [
+      {
+        "file": "apps/command-center/private/tool-code/hve-no-ecg/LICENSE",
+        "bytes": 1229,
+        "sha256": "51c010d285894558695812b9883d9c9ae7c9c89526f43597917e778965e65d93"
+      },
+      {
+        "file": "apps/command-center/private/tool-code/hve-no-ecg/NOTICE.md",
+        "bytes": 1183,
+        "sha256": "b7d5eaa1074d1673caf885ac49b38e9b54b2c6086b45072eacf7b3fe139d8a6d"
+      }
+    ],
+    "protectedFilesPreservedFromOldPayload": [],
+    "protectedRemoteAttributionReferences": {
+      "LICENSE": {
+        "path": "LICENSE",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+        "size": 11358,
+        "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/d645695673349e3947e8e5ae42332d0ac3164cd7"
+      },
+      "NOTICE": {
+        "path": "NOTICE",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "55069b6f367f57e92b3d93c54d8d497d1114e337",
+        "size": 1622,
+        "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/55069b6f367f57e92b3d93c54d8d497d1114e337"
+      },
+      "AUTHORSHIP.md": {
+        "path": "AUTHORSHIP.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fd433580cefc0521657fc2ea1bc611d54b46a766",
+        "size": 3291,
+        "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/fd433580cefc0521657fc2ea1bc611d54b46a766"
+      },
+      "CITATION.cff": {
+        "path": "CITATION.cff",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "22086eaf02c60930f16f77c8f8f30a67e5611305",
+        "size": 913,
+        "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/22086eaf02c60930f16f77c8f8f30a67e5611305"
+      },
+      "SECURITY.md": {
+        "path": "SECURITY.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "44eafb996937916cbe53e24fa9c5208fe03d5767",
+        "size": 894,
+        "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/44eafb996937916cbe53e24fa9c5208fe03d5767"
+      },
+      "CONTRIBUTING.md": {
+        "path": "CONTRIBUTING.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c496276fb860ca486163e81823cae3e67194d95a",
+        "size": 1461,
+        "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/c496276fb860ca486163e81823cae3e67194d95a"
+      },
+      ".github/workflows/ci.yml": {
+        "path": ".github/workflows/ci.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7d3f2f34aa2e948d30695d82d64361467d9e6485",
+        "size": 279,
+        "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/7d3f2f34aa2e948d30695d82d64361467d9e6485"
+      },
+      ".gitattributes": {
+        "path": ".gitattributes",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6313b56c57848efce05faa7aa7e901ccfc2886ea",
+        "size": 19,
+        "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/6313b56c57848efce05faa7aa7e901ccfc2886ea"
+      },
+      ".gitignore": {
+        "path": ".gitignore",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e375bd25cf1a574310ac4c7af0299884556e81e1",
+        "size": 42,
+        "url": "https://api.github.com/repos/Elucenia/tool-hve-no-ecg/git/blobs/e375bd25cf1a574310ac4c7af0299884556e81e1"
+      }
+    },
+    "sourceSpecificEvidence": {
+      "sourceSpecificStatus": "not-approved-by-this-consolidation",
+      "sourceSpecificEvidence": null,
+      "wholeInstrumentApproval": false,
+      "oldCandidateInstrumentRightsApproval": "not-performed"
+    },
+    "scope": "Historical Apache declaration and current MIT integration notices retained with exact sources; no relicensing or instrument approval inferred",
+    "reviewRequired": true,
+    "divergences": [
+      "Historical payload and current package declare different license labels; scope/authorship mapping must be reviewed before distribution"
+    ],
+    "wholeInstrumentApproval": false
+  },
+  "appWrites": false,
+  "externalMutations": false,
+  "publicationPerformed": false,
+  "externalPublicationReady": false,
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false
+}

@@ -1,0 +1,1693 @@
+{
+  "receipt": {
+    "file": "reports/review-20261005-completion/deploy-lock/r5-all-calculators-http-results.json",
+    "bytes": 7105457,
+    "sha256": "be450b3731f8b30a13e0b36bf1f2f579bce00de325c5622bc3e526235c1c79f7"
+  },
+  "build": {
+    "id": "RYDdJbZxqrM8sgoyKEQc-",
+    "standaloneServer": {
+      "file": "reports/review-20261005-completion/deploy-lock/r5-isolated-runtime/.next/standalone/server.js",
+      "sha256": "631d43264038e7aa367b5405041eb3706d73fd3366925a7ef17a07119cfa166e",
+      "bytes": 10457
+    },
+    "catalogPin": {
+      "file": "deliveries/elucenia-next-hostinger-r5/.next/server/pages/en/tools.json",
+      "sha256": "33917dfdae9bea59cae22bfca34eaef2a21046a832af98c1a8d2718075de63ec",
+      "bytes": 103793
+    }
+  },
+  "scope": {
+    "syntheticDataOnly": true,
+    "applicationModuleImports": 0,
+    "browserInteractions": 0,
+    "newIndependentOracles": 0,
+    "nativeSourceReferenceCases": 882,
+    "additionalDecimalCases": 4,
+    "clinicalApproval": false,
+    "professionalLanguageApproval": false,
+    "populationValidation": false,
+    "hostingerDeploymentVerified": false,
+    "actualHTTPExecution": true,
+    "standaloneNodeServer": true,
+    "nodeVersion": "v22.18.0",
+    "noNewClinicalOrProfessionalApproval": true,
+    "pubmedResourceIsNotCalculatorAndNotIncludedIn222": true,
+    "description": "All 882 existing reference cases across the 218 native calculators plus four existing Decimal50 examples, executed via HTTP against the final local r5 standalone build. Raw precise source-audit comparisons are transport regressions, not independent clinical or full-method validation."
+  },
+  "tool": {
+    "id": "hve-no-ecg",
+    "title": "Critérios de voltagem para HVE no ECG",
+    "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+    "implementationVersion": "hve-no-ecg@native-2026-10-04+a0796fa9f026",
+    "sources": [
+      [
+        "Okin et al. · LIFE 2004 · convenção do produto de Cornell",
+        "https://jamanetwork.com/journals/jama/fullarticle/199807"
+      ],
+      [
+        "Sokolow M, Lyon TP. The ventricular complex in left ventricular hypertrophy as obtained by unipolar precordial and limb leads. Am Heart J, 1949.",
+        "https://doi.org/10.1016/0002-8703(49)90562-1"
+      ],
+      [
+        "Casale PN et al. Improved sex-specific criteria of left ventricular hypertrophy for clinical and computer interpretation of electrocardiograms: validation with autopsy findings. Circulation, 1987.",
+        "https://doi.org/10.1161/01.CIR.75.3.565"
+      ],
+      [
+        "Okin PM et al. Electrocardiographic identification of increased left ventricular mass by simple voltage-duration products. J Am Coll Cardiol, 1995.",
+        "https://doi.org/10.1016/0735-1097(94)00371-V"
+      ]
+    ],
+    "limits": "Saída é número de critérios positivos, sem diagnóstico de HVE ou declaração de ausência de HVE. Produto usa convenção LIFE de +6 mm em mulheres; outras versões usam convenções distintas.",
+    "sourceEditionEvidence": [
+      {
+        "citation": "Okin et al. · LIFE 2004 · convenção do produto de Cornell",
+        "url": "https://jamanetwork.com/journals/jama/fullarticle/199807",
+        "class": "existing-source-record-transcribed",
+        "declaredCitationPreserved": true,
+        "sourceIdentityRecheckedInThisNormalization": false,
+        "publicationEditionConfirmationInThisNormalization": "not-performed",
+        "fullTextRetrievalInThisNormalization": false,
+        "formulaConformance": "not-assessed"
+      },
+      {
+        "citation": "Sokolow M, Lyon TP. The ventricular complex in left ventricular hypertrophy as obtained by unipolar precordial and limb leads. Am Heart J, 1949.",
+        "url": "https://doi.org/10.1016/0002-8703(49)90562-1",
+        "class": "existing-source-record-transcribed",
+        "declaredCitationPreserved": true,
+        "sourceIdentityRecheckedInThisNormalization": false,
+        "publicationEditionConfirmationInThisNormalization": "not-performed",
+        "fullTextRetrievalInThisNormalization": false,
+        "formulaConformance": "not-assessed"
+      },
+      {
+        "citation": "Casale PN et al. Improved sex-specific criteria of left ventricular hypertrophy for clinical and computer interpretation of electrocardiograms: validation with autopsy findings. Circulation, 1987.",
+        "url": "https://doi.org/10.1161/01.CIR.75.3.565",
+        "class": "existing-source-record-transcribed",
+        "declaredCitationPreserved": true,
+        "sourceIdentityRecheckedInThisNormalization": false,
+        "publicationEditionConfirmationInThisNormalization": "not-performed",
+        "fullTextRetrievalInThisNormalization": false,
+        "formulaConformance": "not-assessed"
+      },
+      {
+        "citation": "Okin PM et al. Electrocardiographic identification of increased left ventricular mass by simple voltage-duration products. J Am Coll Cardiol, 1995.",
+        "url": "https://doi.org/10.1016/0735-1097(94)00371-V",
+        "class": "existing-source-record-transcribed",
+        "declaredCitationPreserved": true,
+        "sourceIdentityRecheckedInThisNormalization": false,
+        "publicationEditionConfirmationInThisNormalization": "not-performed",
+        "fullTextRetrievalInThisNormalization": false,
+        "formulaConformance": "not-assessed"
+      }
+    ],
+    "calculator": {
+      "file": "deliveries/elucenia-next-hostinger-r5/private/tool-code/hve-no-ecg/calculator.js",
+      "sha256": "a0796fa9f026928db3b3cf2c922c9ed7fbf94f5bf4f39bd5513cbfe2e7c4425c",
+      "bytes": 481
+    },
+    "cases": 6,
+    "clinicalApproval": false,
+    "professionalLanguageApproval": false,
+    "replayed": 6,
+    "passed": 6,
+    "failed": 0,
+    "status": "passed"
+  },
+  "results": [
+    {
+      "id": "hve-no-ecg",
+      "kind": "native-source-reference",
+      "index": 0,
+      "name": "Vetor sintético principal de referência",
+      "originalInput": {
+        "sexo": "F",
+        "sv1": 15,
+        "rv5": 20,
+        "rv6": 18,
+        "ravl": 10,
+        "sv3": 14,
+        "qrs": 100,
+        "contexto": "1"
+      },
+      "input": {
+        "sexo": "F",
+        "sv1": 15,
+        "rv5": 20,
+        "rv6": 18,
+        "ravl": 10,
+        "sv3": 14,
+        "qrs": 100,
+        "contexto": "1"
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "sl": 35,
+          "cv": 24,
+          "cp": 3000,
+          "n": 3
+        },
+        "main": "3"
+      },
+      "recordedResult": {
+        "main": [
+          "3",
+          "critérios"
+        ],
+        "label": "Critérios eletrocardiográficos positivos",
+        "raw": {
+          "sl": 35,
+          "cv": 24,
+          "cp": 3000,
+          "n": 3
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "da6d27d65bcaed56528da83bd0ffaa3d407fc467ea7f9cb67ec40a1a78c6febf",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r5/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3062/api/tools/hve-no-ecg/calculate",
+        "origin": "http://127.0.0.1:3062",
+        "payload": {
+          "input": {
+            "sexo": "F",
+            "sv1": 15,
+            "rv5": 20,
+            "rv6": 18,
+            "ravl": 10,
+            "sv3": 14,
+            "qrs": 100,
+            "contexto": "1"
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3062/api/tools/hve-no-ecg/calculate",
+          "startedAt": "2026-10-05T15:15:20.102Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "hve-no-ecg",
+              "main": [
+                "3",
+                "critérios"
+              ],
+              "label": "Critérios eletrocardiográficos positivos",
+              "raw": {
+                "sl": 35,
+                "cv": 24,
+                "cp": 3000,
+                "n": 3
+              },
+              "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "ed8c19d527918ec9f297688b702b7d1e3e5c7176cc220d872b66064a20e319d9",
+          "bytes": 265,
+          "elapsedMs": 8.6478000000061
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3062/api/tools/hve-no-ecg/calculate",
+        "startedAt": "2026-10-05T15:15:20.102Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "hve-no-ecg",
+            "main": [
+              "3",
+              "critérios"
+            ],
+            "label": "Critérios eletrocardiográficos positivos",
+            "raw": {
+              "sl": 35,
+              "cv": 24,
+              "cp": 3000,
+              "n": 3
+            },
+            "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "ed8c19d527918ec9f297688b702b7d1e3e5c7176cc220d872b66064a20e319d9",
+        "bytes": 265,
+        "elapsedMs": 8.6478000000061
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.main",
+            "expected": "3",
+            "obtained": "3",
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.sl",
+            "expected": 35,
+            "obtained": 35,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.cv",
+            "expected": 24,
+            "obtained": 24,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.cp",
+            "expected": 3000,
+            "obtained": 3000,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.n",
+            "expected": 3,
+            "obtained": 3,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.sl",
+            "expected": 35,
+            "obtained": 35,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.cv",
+            "expected": 24,
+            "obtained": 24,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.cp",
+            "expected": 3000,
+            "obtained": 3000,
+            "tolerance": 3e-9,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.n",
+            "expected": 3,
+            "obtained": 3,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "3",
+            "obtained": "3",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "critérios",
+            "obtained": "critérios",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": []
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "hve-no-ecg",
+      "kind": "native-source-reference",
+      "index": 1,
+      "name": "Cornell feminino exatamente20 não ultrapassa limiar",
+      "originalInput": {
+        "sexo": "F",
+        "sv1": 0,
+        "rv5": 0,
+        "rv6": 0,
+        "ravl": 10,
+        "sv3": 10,
+        "qrs": null,
+        "contexto": "1"
+      },
+      "input": {
+        "sexo": "F",
+        "sv1": 0,
+        "rv5": 0,
+        "rv6": 0,
+        "ravl": 10,
+        "sv3": 10,
+        "qrs": null,
+        "contexto": "1"
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "sl": 0,
+          "cv": 20,
+          "cp": null,
+          "n": 0
+        },
+        "main": "0"
+      },
+      "recordedResult": {
+        "main": [
+          "0",
+          "critérios"
+        ],
+        "label": "Critérios eletrocardiográficos positivos",
+        "raw": {
+          "sl": 0,
+          "cv": 20,
+          "cp": null,
+          "n": 0
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "da6d27d65bcaed56528da83bd0ffaa3d407fc467ea7f9cb67ec40a1a78c6febf",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r5/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3062/api/tools/hve-no-ecg/calculate",
+        "origin": "http://127.0.0.1:3062",
+        "payload": {
+          "input": {
+            "sexo": "F",
+            "sv1": 0,
+            "rv5": 0,
+            "rv6": 0,
+            "ravl": 10,
+            "sv3": 10,
+            "qrs": null,
+            "contexto": "1"
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3062/api/tools/hve-no-ecg/calculate",
+          "startedAt": "2026-10-05T15:15:20.413Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "hve-no-ecg",
+              "main": [
+                "0",
+                "critérios"
+              ],
+              "label": "Critérios eletrocardiográficos positivos",
+              "raw": {
+                "sl": 0,
+                "cv": 20,
+                "cp": null,
+                "n": 0
+              },
+              "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "a46eb97aff4fdec08455bbfa8a8934557f13ede01cdea0fd39a9b94aed1ea357",
+          "bytes": 264,
+          "elapsedMs": 4.000499999994645
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3062/api/tools/hve-no-ecg/calculate",
+        "startedAt": "2026-10-05T15:15:20.413Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "hve-no-ecg",
+            "main": [
+              "0",
+              "critérios"
+            ],
+            "label": "Critérios eletrocardiográficos positivos",
+            "raw": {
+              "sl": 0,
+              "cv": 20,
+              "cp": null,
+              "n": 0
+            },
+            "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "a46eb97aff4fdec08455bbfa8a8934557f13ede01cdea0fd39a9b94aed1ea357",
+        "bytes": 264,
+        "elapsedMs": 4.000499999994645
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.main",
+            "expected": "0",
+            "obtained": "0",
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.sl",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.cv",
+            "expected": 20,
+            "obtained": 20,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.cp",
+            "expected": null,
+            "obtained": null,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.n",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.sl",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.cv",
+            "expected": 20,
+            "obtained": 20,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.cp",
+            "expected": null,
+            "obtained": null,
+            "scope": "Existing source-audit transport regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.n",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "0",
+            "obtained": "0",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "critérios",
+            "obtained": "critérios",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": []
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "hve-no-ecg",
+      "kind": "native-source-reference",
+      "index": 2,
+      "name": "Cornell masculino exatamente28 não ultrapassa limiar",
+      "originalInput": {
+        "sexo": "M",
+        "sv1": 0,
+        "rv5": 0,
+        "rv6": 0,
+        "ravl": 10,
+        "sv3": 18,
+        "qrs": null,
+        "contexto": "1"
+      },
+      "input": {
+        "sexo": "M",
+        "sv1": 0,
+        "rv5": 0,
+        "rv6": 0,
+        "ravl": 10,
+        "sv3": 18,
+        "qrs": null,
+        "contexto": "1"
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "sl": 0,
+          "cv": 28,
+          "cp": null,
+          "n": 0
+        },
+        "main": "0"
+      },
+      "recordedResult": {
+        "main": [
+          "0",
+          "critérios"
+        ],
+        "label": "Critérios eletrocardiográficos positivos",
+        "raw": {
+          "sl": 0,
+          "cv": 28,
+          "cp": null,
+          "n": 0
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "da6d27d65bcaed56528da83bd0ffaa3d407fc467ea7f9cb67ec40a1a78c6febf",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r5/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3062/api/tools/hve-no-ecg/calculate",
+        "origin": "http://127.0.0.1:3062",
+        "payload": {
+          "input": {
+            "sexo": "M",
+            "sv1": 0,
+            "rv5": 0,
+            "rv6": 0,
+            "ravl": 10,
+            "sv3": 18,
+            "qrs": null,
+            "contexto": "1"
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3062/api/tools/hve-no-ecg/calculate",
+          "startedAt": "2026-10-05T15:15:20.725Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "hve-no-ecg",
+              "main": [
+                "0",
+                "critérios"
+              ],
+              "label": "Critérios eletrocardiográficos positivos",
+              "raw": {
+                "sl": 0,
+                "cv": 28,
+                "cp": null,
+                "n": 0
+              },
+              "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "0e58c8865ad5d238bb028eec14840ac9536046a57718c2d29d24197b31380d5a",
+          "bytes": 264,
+          "elapsedMs": 2.9818000000086613
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3062/api/tools/hve-no-ecg/calculate",
+        "startedAt": "2026-10-05T15:15:20.725Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "hve-no-ecg",
+            "main": [
+              "0",
+              "critérios"
+            ],
+            "label": "Critérios eletrocardiográficos positivos",
+            "raw": {
+              "sl": 0,
+              "cv": 28,
+              "cp": null,
+              "n": 0
+            },
+            "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "0e58c8865ad5d238bb028eec14840ac9536046a57718c2d29d24197b31380d5a",
+        "bytes": 264,
+        "elapsedMs": 2.9818000000086613
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.main",
+            "expected": "0",
+            "obtained": "0",
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.sl",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.cv",
+            "expected": 28,
+            "obtained": 28,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.cp",
+            "expected": null,
+            "obtained": null,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.n",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.sl",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.cv",
+            "expected": 28,
+            "obtained": 28,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.cp",
+            "expected": null,
+            "obtained": null,
+            "scope": "Existing source-audit transport regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.n",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "0",
+            "obtained": "0",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "critérios",
+            "obtained": "critérios",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": []
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "hve-no-ecg",
+      "kind": "native-source-reference",
+      "index": 3,
+      "name": "ProdutoLIFE feminino exatamente2440 não ultrapassa limiar",
+      "originalInput": {
+        "sexo": "F",
+        "sv1": 0,
+        "rv5": 0,
+        "rv6": 0,
+        "ravl": 10,
+        "sv3": 8.4,
+        "qrs": 100,
+        "contexto": "1"
+      },
+      "input": {
+        "sexo": "F",
+        "sv1": 0,
+        "rv5": 0,
+        "rv6": 0,
+        "ravl": 10,
+        "sv3": 8.4,
+        "qrs": 100,
+        "contexto": "1"
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "sl": 0,
+          "cv": 18.4,
+          "cp": 2440,
+          "n": 0
+        },
+        "main": "0",
+        "tol": 1e-9
+      },
+      "recordedResult": {
+        "main": [
+          "0",
+          "critérios"
+        ],
+        "label": "Critérios eletrocardiográficos positivos",
+        "raw": {
+          "sl": 0,
+          "cv": 18.4,
+          "cp": 2440,
+          "n": 0
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "da6d27d65bcaed56528da83bd0ffaa3d407fc467ea7f9cb67ec40a1a78c6febf",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r5/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3062/api/tools/hve-no-ecg/calculate",
+        "origin": "http://127.0.0.1:3062",
+        "payload": {
+          "input": {
+            "sexo": "F",
+            "sv1": 0,
+            "rv5": 0,
+            "rv6": 0,
+            "ravl": 10,
+            "sv3": 8.4,
+            "qrs": 100,
+            "contexto": "1"
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3062/api/tools/hve-no-ecg/calculate",
+          "startedAt": "2026-10-05T15:15:21.039Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "hve-no-ecg",
+              "main": [
+                "0",
+                "critérios"
+              ],
+              "label": "Critérios eletrocardiográficos positivos",
+              "raw": {
+                "sl": 0,
+                "cv": 18.4,
+                "cp": 2440,
+                "n": 0
+              },
+              "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "cd82c69d376271b6d43eb96b0bac099d78566bdcb238a812c6bfe540041a12a6",
+          "bytes": 266,
+          "elapsedMs": 3.6521000000066124
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3062/api/tools/hve-no-ecg/calculate",
+        "startedAt": "2026-10-05T15:15:21.039Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "hve-no-ecg",
+            "main": [
+              "0",
+              "critérios"
+            ],
+            "label": "Critérios eletrocardiográficos positivos",
+            "raw": {
+              "sl": 0,
+              "cv": 18.4,
+              "cp": 2440,
+              "n": 0
+            },
+            "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "cd82c69d376271b6d43eb96b0bac099d78566bdcb238a812c6bfe540041a12a6",
+        "bytes": 266,
+        "elapsedMs": 3.6521000000066124
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.main",
+            "expected": "0",
+            "obtained": "0",
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.sl",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-9,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.cv",
+            "expected": 18.4,
+            "obtained": 18.4,
+            "tolerance": 1e-9,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.cp",
+            "expected": 2440,
+            "obtained": 2440,
+            "tolerance": 1e-9,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.n",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-9,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.sl",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.cv",
+            "expected": 18.4,
+            "obtained": 18.4,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.cp",
+            "expected": 2440,
+            "obtained": 2440,
+            "tolerance": 2.44e-9,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.n",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "0",
+            "obtained": "0",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "critérios",
+            "obtained": "critérios",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": []
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "hve-no-ecg",
+      "kind": "native-source-reference",
+      "index": 4,
+      "name": "LIFE feminino+6 distingue da versão+8",
+      "originalInput": {
+        "sexo": "F",
+        "sv1": 0,
+        "rv5": 0,
+        "rv6": 0,
+        "ravl": 10,
+        "sv3": 8,
+        "qrs": 100,
+        "contexto": "1"
+      },
+      "input": {
+        "sexo": "F",
+        "sv1": 0,
+        "rv5": 0,
+        "rv6": 0,
+        "ravl": 10,
+        "sv3": 8,
+        "qrs": 100,
+        "contexto": "1"
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "sl": 0,
+          "cv": 18,
+          "cp": 2400,
+          "n": 0
+        },
+        "main": "0"
+      },
+      "recordedResult": {
+        "main": [
+          "0",
+          "critérios"
+        ],
+        "label": "Critérios eletrocardiográficos positivos",
+        "raw": {
+          "sl": 0,
+          "cv": 18,
+          "cp": 2400,
+          "n": 0
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "da6d27d65bcaed56528da83bd0ffaa3d407fc467ea7f9cb67ec40a1a78c6febf",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r5/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3062/api/tools/hve-no-ecg/calculate",
+        "origin": "http://127.0.0.1:3062",
+        "payload": {
+          "input": {
+            "sexo": "F",
+            "sv1": 0,
+            "rv5": 0,
+            "rv6": 0,
+            "ravl": 10,
+            "sv3": 8,
+            "qrs": 100,
+            "contexto": "1"
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3062/api/tools/hve-no-ecg/calculate",
+          "startedAt": "2026-10-05T15:15:21.350Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "hve-no-ecg",
+              "main": [
+                "0",
+                "critérios"
+              ],
+              "label": "Critérios eletrocardiográficos positivos",
+              "raw": {
+                "sl": 0,
+                "cv": 18,
+                "cp": 2400,
+                "n": 0
+              },
+              "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "0fab4c2df7c4911425cba4658df6026f90c712d897f732e44313c24a0f2ce988",
+          "bytes": 264,
+          "elapsedMs": 6.5917000000190455
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3062/api/tools/hve-no-ecg/calculate",
+        "startedAt": "2026-10-05T15:15:21.350Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "hve-no-ecg",
+            "main": [
+              "0",
+              "critérios"
+            ],
+            "label": "Critérios eletrocardiográficos positivos",
+            "raw": {
+              "sl": 0,
+              "cv": 18,
+              "cp": 2400,
+              "n": 0
+            },
+            "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "0fab4c2df7c4911425cba4658df6026f90c712d897f732e44313c24a0f2ce988",
+        "bytes": 264,
+        "elapsedMs": 6.5917000000190455
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.main",
+            "expected": "0",
+            "obtained": "0",
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.sl",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.cv",
+            "expected": 18,
+            "obtained": 18,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.cp",
+            "expected": 2400,
+            "obtained": 2400,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.n",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.sl",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.cv",
+            "expected": 18,
+            "obtained": 18,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.cp",
+            "expected": 2400,
+            "obtained": 2400,
+            "tolerance": 2.4e-9,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.n",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "0",
+            "obtained": "0",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "critérios",
+            "obtained": "critérios",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": []
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "hve-no-ecg",
+      "kind": "native-source-reference",
+      "index": 5,
+      "name": "R aVL11 é critério mesmo sem Cornell",
+      "originalInput": {
+        "sexo": "F",
+        "sv1": 0,
+        "rv5": 0,
+        "rv6": 0,
+        "ravl": 11,
+        "sv3": 0,
+        "qrs": null,
+        "contexto": "1"
+      },
+      "input": {
+        "sexo": "F",
+        "sv1": 0,
+        "rv5": 0,
+        "rv6": 0,
+        "ravl": 11,
+        "sv3": 0,
+        "qrs": null,
+        "contexto": "1"
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "sl": 0,
+          "cv": 11,
+          "cp": null,
+          "n": 1
+        },
+        "main": "1"
+      },
+      "recordedResult": {
+        "main": [
+          "1",
+          "critérios"
+        ],
+        "label": "Critérios eletrocardiográficos positivos",
+        "raw": {
+          "sl": 0,
+          "cv": 11,
+          "cp": null,
+          "n": 1
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "da6d27d65bcaed56528da83bd0ffaa3d407fc467ea7f9cb67ec40a1a78c6febf",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r5/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3062/api/tools/hve-no-ecg/calculate",
+        "origin": "http://127.0.0.1:3062",
+        "payload": {
+          "input": {
+            "sexo": "F",
+            "sv1": 0,
+            "rv5": 0,
+            "rv6": 0,
+            "ravl": 11,
+            "sv3": 0,
+            "qrs": null,
+            "contexto": "1"
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3062/api/tools/hve-no-ecg/calculate",
+          "startedAt": "2026-10-05T15:15:21.660Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "hve-no-ecg",
+              "main": [
+                "1",
+                "critérios"
+              ],
+              "label": "Critérios eletrocardiográficos positivos",
+              "raw": {
+                "sl": 0,
+                "cv": 11,
+                "cp": null,
+                "n": 1
+              },
+              "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "9ed2f2cd0c1ab85e9b88d2a3b80a46d1cd8244317f3e688dab30542c6fc23967",
+          "bytes": 264,
+          "elapsedMs": 4.41380000000936
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3062/api/tools/hve-no-ecg/calculate",
+        "startedAt": "2026-10-05T15:15:21.660Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "hve-no-ecg",
+            "main": [
+              "1",
+              "critérios"
+            ],
+            "label": "Critérios eletrocardiográficos positivos",
+            "raw": {
+              "sl": 0,
+              "cv": 11,
+              "cp": null,
+              "n": 1
+            },
+            "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "9ed2f2cd0c1ab85e9b88d2a3b80a46d1cd8244317f3e688dab30542c6fc23967",
+        "bytes": 264,
+        "elapsedMs": 4.41380000000936
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.main",
+            "expected": "1",
+            "obtained": "1",
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.sl",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.cv",
+            "expected": 11,
+            "obtained": 11,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.cp",
+            "expected": null,
+            "obtained": null,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.n",
+            "expected": 1,
+            "obtained": 1,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.sl",
+            "expected": 0,
+            "obtained": 0,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.cv",
+            "expected": 11,
+            "obtained": 11,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.cp",
+            "expected": null,
+            "obtained": null,
+            "scope": "Existing source-audit transport regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.n",
+            "expected": 1,
+            "obtained": 1,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "1",
+            "obtained": "1",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "critérios",
+            "obtained": "critérios",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": []
+      },
+      "status": "passed",
+      "error": null
+    }
+  ],
+  "endBindings": true
+}

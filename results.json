@@ -1,0 +1,1042 @@
+{
+  "at": "2026-10-05T15:24:37.773Z",
+  "id": "hve-no-ecg",
+  "engine": {
+    "file": "apps/website/private/tool-code/hve-no-ecg/calculator.js",
+    "bytes": 481,
+    "sha256": "a0796fa9f026928db3b3cf2c922c9ed7fbf94f5bf4f39bd5513cbfe2e7c4425c"
+  },
+  "sourceParity": "Node current source / per-tool browser VM outputs match",
+  "cases": [
+    {
+      "id": "hve-no-ecg",
+      "index": 0,
+      "name": "Vetor sintético principal de referência",
+      "input": {
+        "sexo": "F",
+        "sv1": 15,
+        "rv5": 20,
+        "rv6": 18,
+        "ravl": 10,
+        "sv3": 14,
+        "qrs": 100,
+        "contexto": "1"
+      },
+      "expected": {
+        "raw": {
+          "sl": 35,
+          "cv": 24,
+          "cp": 3000,
+          "n": 3
+        },
+        "main": "3"
+      },
+      "obtained": {
+        "id": "hve-no-ecg",
+        "main": [
+          "3",
+          "critérios"
+        ],
+        "label": "Critérios eletrocardiográficos positivos",
+        "raw": {
+          "sl": 35,
+          "cv": 24,
+          "cp": 3000,
+          "n": 3
+        },
+        "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+        "clinicalValidation": "not-performed"
+      },
+      "browserVm": {
+        "id": "hve-no-ecg",
+        "main": [
+          "3",
+          "critérios"
+        ],
+        "label": "Critérios eletrocardiográficos positivos",
+        "raw": {
+          "sl": 35,
+          "cv": 24,
+          "cp": 3000,
+          "n": 3
+        },
+        "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.main",
+          "expected": "3",
+          "obtained": "3",
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.sl",
+          "expected": 35,
+          "obtained": 35,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.cv",
+          "expected": 24,
+          "obtained": 24,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.cp",
+          "expected": 3000,
+          "obtained": 3000,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.n",
+          "expected": 3,
+          "obtained": 3,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.sl",
+          "expected": 35,
+          "obtained": 35,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.cv",
+          "expected": 24,
+          "obtained": 24,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.cp",
+          "expected": 3000,
+          "obtained": 3000,
+          "tolerance": 3e-9,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.n",
+          "expected": 3,
+          "obtained": 3,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "3",
+          "obtained": "3",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "critérios",
+          "obtained": "critérios",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [],
+      "status": "passed"
+    },
+    {
+      "id": "hve-no-ecg",
+      "index": 1,
+      "name": "Cornell feminino exatamente20 não ultrapassa limiar",
+      "input": {
+        "sexo": "F",
+        "sv1": 0,
+        "rv5": 0,
+        "rv6": 0,
+        "ravl": 10,
+        "sv3": 10,
+        "qrs": null,
+        "contexto": "1"
+      },
+      "expected": {
+        "raw": {
+          "sl": 0,
+          "cv": 20,
+          "cp": null,
+          "n": 0
+        },
+        "main": "0"
+      },
+      "obtained": {
+        "id": "hve-no-ecg",
+        "main": [
+          "0",
+          "critérios"
+        ],
+        "label": "Critérios eletrocardiográficos positivos",
+        "raw": {
+          "sl": 0,
+          "cv": 20,
+          "cp": null,
+          "n": 0
+        },
+        "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+        "clinicalValidation": "not-performed"
+      },
+      "browserVm": {
+        "id": "hve-no-ecg",
+        "main": [
+          "0",
+          "critérios"
+        ],
+        "label": "Critérios eletrocardiográficos positivos",
+        "raw": {
+          "sl": 0,
+          "cv": 20,
+          "cp": null,
+          "n": 0
+        },
+        "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.main",
+          "expected": "0",
+          "obtained": "0",
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.sl",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.cv",
+          "expected": 20,
+          "obtained": 20,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.cp",
+          "expected": null,
+          "obtained": null,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.n",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.sl",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.cv",
+          "expected": 20,
+          "obtained": 20,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.cp",
+          "expected": null,
+          "obtained": null,
+          "scope": "Existing source-audit transport regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.n",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "0",
+          "obtained": "0",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "critérios",
+          "obtained": "critérios",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [],
+      "status": "passed"
+    },
+    {
+      "id": "hve-no-ecg",
+      "index": 2,
+      "name": "Cornell masculino exatamente28 não ultrapassa limiar",
+      "input": {
+        "sexo": "M",
+        "sv1": 0,
+        "rv5": 0,
+        "rv6": 0,
+        "ravl": 10,
+        "sv3": 18,
+        "qrs": null,
+        "contexto": "1"
+      },
+      "expected": {
+        "raw": {
+          "sl": 0,
+          "cv": 28,
+          "cp": null,
+          "n": 0
+        },
+        "main": "0"
+      },
+      "obtained": {
+        "id": "hve-no-ecg",
+        "main": [
+          "0",
+          "critérios"
+        ],
+        "label": "Critérios eletrocardiográficos positivos",
+        "raw": {
+          "sl": 0,
+          "cv": 28,
+          "cp": null,
+          "n": 0
+        },
+        "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+        "clinicalValidation": "not-performed"
+      },
+      "browserVm": {
+        "id": "hve-no-ecg",
+        "main": [
+          "0",
+          "critérios"
+        ],
+        "label": "Critérios eletrocardiográficos positivos",
+        "raw": {
+          "sl": 0,
+          "cv": 28,
+          "cp": null,
+          "n": 0
+        },
+        "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.main",
+          "expected": "0",
+          "obtained": "0",
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.sl",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.cv",
+          "expected": 28,
+          "obtained": 28,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.cp",
+          "expected": null,
+          "obtained": null,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.n",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.sl",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.cv",
+          "expected": 28,
+          "obtained": 28,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.cp",
+          "expected": null,
+          "obtained": null,
+          "scope": "Existing source-audit transport regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.n",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "0",
+          "obtained": "0",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "critérios",
+          "obtained": "critérios",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [],
+      "status": "passed"
+    },
+    {
+      "id": "hve-no-ecg",
+      "index": 3,
+      "name": "ProdutoLIFE feminino exatamente2440 não ultrapassa limiar",
+      "input": {
+        "sexo": "F",
+        "sv1": 0,
+        "rv5": 0,
+        "rv6": 0,
+        "ravl": 10,
+        "sv3": 8.4,
+        "qrs": 100,
+        "contexto": "1"
+      },
+      "expected": {
+        "raw": {
+          "sl": 0,
+          "cv": 18.4,
+          "cp": 2440,
+          "n": 0
+        },
+        "main": "0",
+        "tol": 1e-9
+      },
+      "obtained": {
+        "id": "hve-no-ecg",
+        "main": [
+          "0",
+          "critérios"
+        ],
+        "label": "Critérios eletrocardiográficos positivos",
+        "raw": {
+          "sl": 0,
+          "cv": 18.4,
+          "cp": 2440,
+          "n": 0
+        },
+        "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+        "clinicalValidation": "not-performed"
+      },
+      "browserVm": {
+        "id": "hve-no-ecg",
+        "main": [
+          "0",
+          "critérios"
+        ],
+        "label": "Critérios eletrocardiográficos positivos",
+        "raw": {
+          "sl": 0,
+          "cv": 18.4,
+          "cp": 2440,
+          "n": 0
+        },
+        "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.main",
+          "expected": "0",
+          "obtained": "0",
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.sl",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-9,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.cv",
+          "expected": 18.4,
+          "obtained": 18.4,
+          "tolerance": 1e-9,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.cp",
+          "expected": 2440,
+          "obtained": 2440,
+          "tolerance": 1e-9,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.n",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-9,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.sl",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.cv",
+          "expected": 18.4,
+          "obtained": 18.4,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.cp",
+          "expected": 2440,
+          "obtained": 2440,
+          "tolerance": 2.44e-9,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.n",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "0",
+          "obtained": "0",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "critérios",
+          "obtained": "critérios",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [],
+      "status": "passed"
+    },
+    {
+      "id": "hve-no-ecg",
+      "index": 4,
+      "name": "LIFE feminino+6 distingue da versão+8",
+      "input": {
+        "sexo": "F",
+        "sv1": 0,
+        "rv5": 0,
+        "rv6": 0,
+        "ravl": 10,
+        "sv3": 8,
+        "qrs": 100,
+        "contexto": "1"
+      },
+      "expected": {
+        "raw": {
+          "sl": 0,
+          "cv": 18,
+          "cp": 2400,
+          "n": 0
+        },
+        "main": "0"
+      },
+      "obtained": {
+        "id": "hve-no-ecg",
+        "main": [
+          "0",
+          "critérios"
+        ],
+        "label": "Critérios eletrocardiográficos positivos",
+        "raw": {
+          "sl": 0,
+          "cv": 18,
+          "cp": 2400,
+          "n": 0
+        },
+        "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+        "clinicalValidation": "not-performed"
+      },
+      "browserVm": {
+        "id": "hve-no-ecg",
+        "main": [
+          "0",
+          "critérios"
+        ],
+        "label": "Critérios eletrocardiográficos positivos",
+        "raw": {
+          "sl": 0,
+          "cv": 18,
+          "cp": 2400,
+          "n": 0
+        },
+        "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.main",
+          "expected": "0",
+          "obtained": "0",
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.sl",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.cv",
+          "expected": 18,
+          "obtained": 18,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.cp",
+          "expected": 2400,
+          "obtained": 2400,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.n",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.sl",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.cv",
+          "expected": 18,
+          "obtained": 18,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.cp",
+          "expected": 2400,
+          "obtained": 2400,
+          "tolerance": 2.4e-9,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.n",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "0",
+          "obtained": "0",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "critérios",
+          "obtained": "critérios",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [],
+      "status": "passed"
+    },
+    {
+      "id": "hve-no-ecg",
+      "index": 5,
+      "name": "R aVL11 é critério mesmo sem Cornell",
+      "input": {
+        "sexo": "F",
+        "sv1": 0,
+        "rv5": 0,
+        "rv6": 0,
+        "ravl": 11,
+        "sv3": 0,
+        "qrs": null,
+        "contexto": "1"
+      },
+      "expected": {
+        "raw": {
+          "sl": 0,
+          "cv": 11,
+          "cp": null,
+          "n": 1
+        },
+        "main": "1"
+      },
+      "obtained": {
+        "id": "hve-no-ecg",
+        "main": [
+          "1",
+          "critérios"
+        ],
+        "label": "Critérios eletrocardiográficos positivos",
+        "raw": {
+          "sl": 0,
+          "cv": 11,
+          "cp": null,
+          "n": 1
+        },
+        "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+        "clinicalValidation": "not-performed"
+      },
+      "browserVm": {
+        "id": "hve-no-ecg",
+        "main": [
+          "1",
+          "critérios"
+        ],
+        "label": "Critérios eletrocardiográficos positivos",
+        "raw": {
+          "sl": 0,
+          "cv": 11,
+          "cp": null,
+          "n": 1
+        },
+        "methodVersion": "Sokolow–Lyon 1949; Cornell 1987; produto de Cornell (LIFE)",
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.main",
+          "expected": "1",
+          "obtained": "1",
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.sl",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.cv",
+          "expected": 11,
+          "obtained": 11,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.cp",
+          "expected": null,
+          "obtained": null,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.n",
+          "expected": 1,
+          "obtained": 1,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.sl",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.cv",
+          "expected": 11,
+          "obtained": 11,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.cp",
+          "expected": null,
+          "obtained": null,
+          "scope": "Existing source-audit transport regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.n",
+          "expected": 1,
+          "obtained": 1,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "1",
+          "obtained": "1",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "critérios",
+          "obtained": "critérios",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [],
+      "status": "passed"
+    }
+  ],
+  "summary": {
+    "cases": 6,
+    "passed": 6,
+    "failed": 0,
+    "checks": 84
+  },
+  "newIndependentOracle": false,
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false
+}

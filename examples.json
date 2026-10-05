@@ -1,123 +1,321 @@
 [
   {
-    "label": "Homem: SV1 15, RV5 25, Cornell 8 + 18 = 26, QRS 100 ms: Sokolow 40 e produto 2.600 positivos",
-    "input": {
-      "sexo": "M",
-      "sv1": 15,
-      "rv5": 25,
-      "rv6": 22,
-      "ravl": 8,
-      "sv3": 18,
-      "qrs": 100
-    },
-    "expected": {
-      "raw": {
-        "sl": 40,
-        "cv": 26,
-        "cp": 2600,
-        "n": 2
-      },
-      "level": "high"
-    },
-    "originalInput": {
-      "sexo": "M",
-      "sv1": 15,
-      "rv5": 25,
-      "rv6": 22,
-      "ravl": 8,
-      "sv3": 18,
-      "qrs": 100
-    },
-    "expandedZeroOptions": []
-  },
-  {
-    "label": "Mulher: Cornell 6 + 16 = 22 (&gt; 20), produto (22 + 6) × 90 = 2.520",
-    "input": {
-      "sexo": "F",
-      "sv1": 10,
-      "rv5": 18,
-      "rv6": 16,
-      "ravl": 6,
-      "sv3": 16,
-      "qrs": 90
-    },
-    "expected": {
-      "raw": {
-        "sl": 28,
-        "cv": 22,
-        "cp": 2520,
-        "n": 2
-      },
-      "level": "high"
-    },
+    "id": "hve-no-ecg",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "Vetor sintético principal de referência",
     "originalInput": {
       "sexo": "F",
-      "sv1": 10,
-      "rv5": 18,
-      "rv6": 16,
-      "ravl": 6,
-      "sv3": 16,
-      "qrs": 90
+      "sv1": 15,
+      "rv5": 20,
+      "rv6": 18,
+      "ravl": 10,
+      "sv3": 14,
+      "qrs": 100,
+      "contexto": "1"
     },
-    "expandedZeroOptions": []
-  },
-  {
-    "label": "Homem sem critérios: Sokolow 25, Cornell 17",
     "input": {
-      "sexo": "M",
-      "sv1": 10,
-      "rv5": 15,
-      "rv6": 14,
-      "ravl": 5,
-      "sv3": 12,
-      "qrs": 90
+      "sexo": "F",
+      "sv1": 15,
+      "rv5": 20,
+      "rv6": 18,
+      "ravl": 10,
+      "sv3": 14,
+      "qrs": 100,
+      "contexto": "1"
     },
-    "expected": {
-      "raw": {
-        "sl": 25,
-        "cv": 17,
-        "cp": 1530,
-        "n": 0
-      },
-      "level": "low"
-    },
-    "originalInput": {
-      "sexo": "M",
-      "sv1": 10,
-      "rv5": 15,
-      "rv6": 14,
-      "ravl": 5,
-      "sv3": 12,
-      "qrs": 90
-    },
-    "expandedZeroOptions": []
-  },
-  {
-    "label": "Limites em homem: Sokolow 35 (positivo) e Cornell 28 (negativo)",
-    "input": {
-      "sexo": "M",
-      "sv1": 20,
-      "rv5": 15,
-      "rv6": 14,
-      "ravl": 5,
-      "sv3": 23
-    },
+    "amendments": [],
     "expected": {
       "raw": {
         "sl": 35,
-        "cv": 28,
-        "n": 1
+        "cv": 24,
+        "cp": 3000,
+        "n": 3
       },
-      "level": "high"
+      "main": "3"
     },
+    "recordedResult": {
+      "main": [
+        "3",
+        "critérios"
+      ],
+      "label": "Critérios eletrocardiográficos positivos",
+      "raw": {
+        "sl": 35,
+        "cv": 24,
+        "cp": 3000,
+        "n": 3
+      }
+    },
+    "provenance": {
+      "receiptSha256": "be450b3731f8b30a13e0b36bf1f2f579bce00de325c5622bc3e526235c1c79f7",
+      "scope": "Existing documented synthetic reference and precise source-audit regression baseline; no new independent oracle"
+    }
+  },
+  {
+    "id": "hve-no-ecg",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "Cornell feminino exatamente20 não ultrapassa limiar",
+    "originalInput": {
+      "sexo": "F",
+      "sv1": 0,
+      "rv5": 0,
+      "rv6": 0,
+      "ravl": 10,
+      "sv3": 10,
+      "qrs": null,
+      "contexto": "1"
+    },
+    "input": {
+      "sexo": "F",
+      "sv1": 0,
+      "rv5": 0,
+      "rv6": 0,
+      "ravl": 10,
+      "sv3": 10,
+      "qrs": null,
+      "contexto": "1"
+    },
+    "amendments": [],
+    "expected": {
+      "raw": {
+        "sl": 0,
+        "cv": 20,
+        "cp": null,
+        "n": 0
+      },
+      "main": "0"
+    },
+    "recordedResult": {
+      "main": [
+        "0",
+        "critérios"
+      ],
+      "label": "Critérios eletrocardiográficos positivos",
+      "raw": {
+        "sl": 0,
+        "cv": 20,
+        "cp": null,
+        "n": 0
+      }
+    },
+    "provenance": {
+      "receiptSha256": "be450b3731f8b30a13e0b36bf1f2f579bce00de325c5622bc3e526235c1c79f7",
+      "scope": "Existing documented synthetic reference and precise source-audit regression baseline; no new independent oracle"
+    }
+  },
+  {
+    "id": "hve-no-ecg",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "Cornell masculino exatamente28 não ultrapassa limiar",
     "originalInput": {
       "sexo": "M",
-      "sv1": 20,
-      "rv5": 15,
-      "rv6": 14,
-      "ravl": 5,
-      "sv3": 23
+      "sv1": 0,
+      "rv5": 0,
+      "rv6": 0,
+      "ravl": 10,
+      "sv3": 18,
+      "qrs": null,
+      "contexto": "1"
     },
-    "expandedZeroOptions": []
+    "input": {
+      "sexo": "M",
+      "sv1": 0,
+      "rv5": 0,
+      "rv6": 0,
+      "ravl": 10,
+      "sv3": 18,
+      "qrs": null,
+      "contexto": "1"
+    },
+    "amendments": [],
+    "expected": {
+      "raw": {
+        "sl": 0,
+        "cv": 28,
+        "cp": null,
+        "n": 0
+      },
+      "main": "0"
+    },
+    "recordedResult": {
+      "main": [
+        "0",
+        "critérios"
+      ],
+      "label": "Critérios eletrocardiográficos positivos",
+      "raw": {
+        "sl": 0,
+        "cv": 28,
+        "cp": null,
+        "n": 0
+      }
+    },
+    "provenance": {
+      "receiptSha256": "be450b3731f8b30a13e0b36bf1f2f579bce00de325c5622bc3e526235c1c79f7",
+      "scope": "Existing documented synthetic reference and precise source-audit regression baseline; no new independent oracle"
+    }
+  },
+  {
+    "id": "hve-no-ecg",
+    "kind": "native-source-reference",
+    "index": 3,
+    "name": "ProdutoLIFE feminino exatamente2440 não ultrapassa limiar",
+    "originalInput": {
+      "sexo": "F",
+      "sv1": 0,
+      "rv5": 0,
+      "rv6": 0,
+      "ravl": 10,
+      "sv3": 8.4,
+      "qrs": 100,
+      "contexto": "1"
+    },
+    "input": {
+      "sexo": "F",
+      "sv1": 0,
+      "rv5": 0,
+      "rv6": 0,
+      "ravl": 10,
+      "sv3": 8.4,
+      "qrs": 100,
+      "contexto": "1"
+    },
+    "amendments": [],
+    "expected": {
+      "raw": {
+        "sl": 0,
+        "cv": 18.4,
+        "cp": 2440,
+        "n": 0
+      },
+      "main": "0",
+      "tol": 1e-9
+    },
+    "recordedResult": {
+      "main": [
+        "0",
+        "critérios"
+      ],
+      "label": "Critérios eletrocardiográficos positivos",
+      "raw": {
+        "sl": 0,
+        "cv": 18.4,
+        "cp": 2440,
+        "n": 0
+      }
+    },
+    "provenance": {
+      "receiptSha256": "be450b3731f8b30a13e0b36bf1f2f579bce00de325c5622bc3e526235c1c79f7",
+      "scope": "Existing documented synthetic reference and precise source-audit regression baseline; no new independent oracle"
+    }
+  },
+  {
+    "id": "hve-no-ecg",
+    "kind": "native-source-reference",
+    "index": 4,
+    "name": "LIFE feminino+6 distingue da versão+8",
+    "originalInput": {
+      "sexo": "F",
+      "sv1": 0,
+      "rv5": 0,
+      "rv6": 0,
+      "ravl": 10,
+      "sv3": 8,
+      "qrs": 100,
+      "contexto": "1"
+    },
+    "input": {
+      "sexo": "F",
+      "sv1": 0,
+      "rv5": 0,
+      "rv6": 0,
+      "ravl": 10,
+      "sv3": 8,
+      "qrs": 100,
+      "contexto": "1"
+    },
+    "amendments": [],
+    "expected": {
+      "raw": {
+        "sl": 0,
+        "cv": 18,
+        "cp": 2400,
+        "n": 0
+      },
+      "main": "0"
+    },
+    "recordedResult": {
+      "main": [
+        "0",
+        "critérios"
+      ],
+      "label": "Critérios eletrocardiográficos positivos",
+      "raw": {
+        "sl": 0,
+        "cv": 18,
+        "cp": 2400,
+        "n": 0
+      }
+    },
+    "provenance": {
+      "receiptSha256": "be450b3731f8b30a13e0b36bf1f2f579bce00de325c5622bc3e526235c1c79f7",
+      "scope": "Existing documented synthetic reference and precise source-audit regression baseline; no new independent oracle"
+    }
+  },
+  {
+    "id": "hve-no-ecg",
+    "kind": "native-source-reference",
+    "index": 5,
+    "name": "R aVL11 é critério mesmo sem Cornell",
+    "originalInput": {
+      "sexo": "F",
+      "sv1": 0,
+      "rv5": 0,
+      "rv6": 0,
+      "ravl": 11,
+      "sv3": 0,
+      "qrs": null,
+      "contexto": "1"
+    },
+    "input": {
+      "sexo": "F",
+      "sv1": 0,
+      "rv5": 0,
+      "rv6": 0,
+      "ravl": 11,
+      "sv3": 0,
+      "qrs": null,
+      "contexto": "1"
+    },
+    "amendments": [],
+    "expected": {
+      "raw": {
+        "sl": 0,
+        "cv": 11,
+        "cp": null,
+        "n": 1
+      },
+      "main": "1"
+    },
+    "recordedResult": {
+      "main": [
+        "1",
+        "critérios"
+      ],
+      "label": "Critérios eletrocardiográficos positivos",
+      "raw": {
+        "sl": 0,
+        "cv": 11,
+        "cp": null,
+        "n": 1
+      }
+    },
+    "provenance": {
+      "receiptSha256": "be450b3731f8b30a13e0b36bf1f2f579bce00de325c5622bc3e526235c1c79f7",
+      "scope": "Existing documented synthetic reference and precise source-audit regression baseline; no new independent oracle"
+    }
   }
 ]
